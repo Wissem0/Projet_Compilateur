@@ -34,7 +34,7 @@
 "int"	                            { return tINT; }
 "const"	                            { return tCONST; }
 ":"	                                { return tCOL; } 
-[a-zA-Z][a-zA-Z0-9_]*	        	{ printf("tID\n");yylval.var = yytext[0]; return tID; }
+[a-zA-Z][a-zA-Z0-9_]*	        	{ printf("tID\n");yylval.var = strdup(yytext); return tID; }
 .	                                { return tERROR;}
 
 
