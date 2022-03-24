@@ -6,7 +6,7 @@ typedef struct Element Element;
 struct Element
 {
     char *type;
-	int index;
+	int adresse;
 	char *nom;
     Element *suivant;
 };
@@ -22,9 +22,12 @@ int indexGlobal;
 Liste* initialisation();
 
 
-void insertion(Liste *liste, char *type, int index, char *nom);
+void insertion(Liste *liste, char *type, int adresse, char *nom);
 
 void afficherListe(Liste *liste);
+
+int adresse(Liste* liste,char *nom);
+
 
 
 

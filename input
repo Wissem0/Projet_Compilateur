@@ -1,1 +1,3 @@
-main() {int a,c,toto; const b = 4,titi, tata =1;}
+main() {
+    int a = 4, b = a, c, toto = 23;
+    }

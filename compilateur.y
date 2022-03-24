@@ -8,20 +8,22 @@ void yyerror(char *s);
 
 
 Liste *Tablesbl;
-File *F = fopen("assembleur","w");
+FILE *F ;
 %}
 %union { int nb; char *var; }
 %token tFL tEQUAL tPO tPC tMINUS tADD tDIV tMUL tMAIN tIF tWHILE tFOR tBRAO tBRAC tRET 
 tSEMC tELSE tINT tCONST tCOL tERROR tCOMP tCOMPG tCOMPL tCOMA tPRINTF
 %token <nb> tNB
 %token <var> tID
-%type <nb> Expr DivMul Terme
+%left tSEMC
+%right tEQUAL tADD tMINUS tMUL tDIV
 
 
 %%
 Main 			: tMAIN tPO tPC { 
 								printf("Main detecte\n"); 
 								Tablesbl = initialisation(); 
+								F = fopen("assembleur","w");
 								indexGlobal =0;}
 								Body
 				{ printf("Prog detecte\n");}
@@ -34,23 +36,20 @@ Declarations  	: Decl Declarations
 				|
 				;
 
-Decl 			: tINT tID tSEMC {insertion(Tablesbl, "int", indexGlobal,$2); afficherListe(Tablesbl);}
-				| tCONST tID tSEMC {insertion(Tablesbl, "const", indexGlobal,$2); afficherListe(Tablesbl);}
-				| tINT tID tEQUAL Expr tSEMC {insertion(Tablesbl, "int", indexGlobal,$2); afficherListe(Tablesbl);}
-				| tCONST tID tEQUAL Expr tSEMC {insertion(Tablesbl, "const", indexGlobal,$2); afficherListe(Tablesbl);}
-				| tINT tID  {insertion(Tablesbl, "int", indexGlobal,$2); afficherListe(Tablesbl);} tCOMA SDecl
-				| tCONST tID  {insertion(Tablesbl, "const", indexGlobal,$2); afficherListe(Tablesbl);} tCOMA SDecl
-				| tINT tID tEQUAL Expr  {insertion(Tablesbl, "int", indexGlobal,$2); afficherListe(Tablesbl);} tCOMA SDecl
-				| tCONST tID tEQUAL Expr  {insertion(Tablesbl, "const", indexGlobal,$2); afficherListe(Tablesbl);} tCOMA SDecl
+Decl 			: tINT tID {insertion(Tablesbl, "int", indexGlobal,$2); afficherListe(Tablesbl);} Suite 
+				| tCONST tID {insertion(Tablesbl, "const int", indexGlobal,$2); afficherListe(Tablesbl);} Suite 
+				;
+Suite 			: tSEMC
+				| tCOMA SDecl
+				| tEQUAL Expr tSEMC
+				| tEQUAL Expr tCOMA SDecl
 				;
 
-SDecl 			: tID  {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);} tCOMA SDecl
-				| tID tSEMC {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);}
-				| tID tEQUAL Expr {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);}  tCOMA SDecl
-				| tID tEQUAL Expr tSEMC {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);}
+SDecl 			: tID  {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);}  Suite
+				| tID tEQUAL {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);}  Expr  Suite
 				;
 
-Ins  			: Calculatrice  tSEMC Ins
+Ins  			: Expr  tSEMC Ins
 	 			| Condition Ins
 				| tPRINTF tPO tID tPC {;} Ins
 				|
@@ -64,28 +63,12 @@ Operateur 		: tCOMP
 				| tCOMPL
 				;
 
-Calculatrice 	: Calcul Calculatrice | Calcul 
-				;
-
-Calcul			: Expr  { ; }
-				| tID tEQUAL Expr  { insertion(Tablesbl, "int", indexGlobal,$1); afficherListe(Tablesbl); } 
-				;
-
-Expr 			: Expr tADD DivMul { ; }
-				| Expr tMINUS DivMul { ; }
-				| DivMul { ; } 
-				;
-
-DivMul 			: DivMul tMUL Terme { ; }
-				| DivMul tDIV Terme { ; }
-				| Terme { ; } 
-				;
-
-Terme 			: tPO Expr tPC { ; }
-				| tID { ;}
-				| tNB { ; } 
-				;
-				
+Expr 			: tID {printf("AFF adresse1:%d  adresse2:%d\n",Tablesbl->premier->adresse, adresse(Tablesbl,$1));}
+				| tNB {printf("AFF adresse:%d %d\n ",Tablesbl->premier->adresse,$1);}
+				| Expr tADD Expr
+				| Expr tMINUS Expr
+				| Expr tMUL Expr
+				| Expr tDIV Expr
 %%
 void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 

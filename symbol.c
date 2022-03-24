@@ -13,7 +13,7 @@ Liste *initialisation()
         exit(EXIT_FAILURE);
     }
 	element->type = NULL;
-	element->index = 0;
+	element->adresse = 0;
 	element->nom = NULL;
     element->suivant = NULL;
     liste->premier = element;
@@ -52,7 +52,7 @@ else{
     }
 }
 
-void insertion(Liste *liste, char *type, int index, char *nom)
+void insertion(Liste *liste, char *type, int adresse, char *nom)
 {
 
        /* printf("erreur");
@@ -76,7 +76,7 @@ void insertion(Liste *liste, char *type, int index, char *nom)
                 }
             else{
             nouveau->type = type;
-            nouveau->index = index;
+            nouveau->adresse = adresse;
             nouveau->nom = nom;
 
             /* Insertion de l'élément au début de la liste */
@@ -101,9 +101,29 @@ void afficherListe(Liste *liste)
     {
 		printf("%s ", actuel->nom);
 		printf("%s ", actuel->type);
-		printf("%d -> ", actuel->index);
+		printf("%d -> ", actuel->adresse);
         actuel = actuel->suivant;
     }
     printf("NULL\n");
 }
 
+
+int adresse(Liste* liste,char *nom){
+    if (liste  == NULL)
+    {
+        return -1;
+    }
+    else
+    {
+        Element *nouveau = liste->premier;
+        while (nouveau !=NULL)
+        {
+            if (strcmp(nom,nouveau->nom) == 0)
+            {
+                return nouveau->adresse;
+            }
+        nouveau = nouveau->suivant;
+        }
+    return -1;
+    }
+}
