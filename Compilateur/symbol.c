@@ -11,13 +11,14 @@ Liste *initialisation()
     if (liste == NULL || element == NULL)
     {
         exit(EXIT_FAILURE);
-    }
+    }   
 	element->type = NULL;
 	element->adresse = 0;
 	element->nom = NULL;
     element->suivant = NULL;
     liste->premier = element;
-
+    longueur = 0;
+    condition = 0;
     return liste;
 }
 
@@ -73,6 +74,7 @@ void insertion(Liste *liste, char *type, int adresse, char *nom)
                     liste->premier->type = type;
                     liste->premier->nom  = nom;
                     indexGlobal++;
+                    longueur++;
                 }
             else{
             nouveau->type = type;
@@ -83,6 +85,7 @@ void insertion(Liste *liste, char *type, int adresse, char *nom)
             nouveau->suivant = liste->premier;
             liste->premier = nouveau;
             indexGlobal++;
+            longueur++;
             }
         
 }
@@ -126,4 +129,53 @@ int adresse(Liste* liste,char *nom){
         }
     return -1;
     }
+}
+
+int adresse_length(Liste* liste,int length){
+    if (liste  == NULL)
+    {
+        return -1;
+    }
+    else
+    {
+        int index = longueur;
+        Element *nouveau = liste->premier;
+        while (nouveau !=NULL && index > length)
+        {
+        index--;
+        nouveau = nouveau->suivant;
+        }
+    return nouveau->adresse;
+    }
+}
+
+
+void supression (Liste *liste){
+
+    if (liste != NULL && liste->premier != NULL && liste->premier->suivant != NULL)
+    {
+    liste->premier = liste->premier->suivant;
+    longueur--;
+    }
+    
+
+}
+
+int length_file (FILE * F)
+{
+    char ch=5;
+    int lines=0;
+    fseek(F, 0, SEEK_SET);
+    ch = fgetc(F);
+
+    while(ch != EOF)
+    {
+        if(ch == '\n')
+            {
+            lines++;
+            }
+        ch = fgetc(F);
+    }
+        
+    return lines;
 }

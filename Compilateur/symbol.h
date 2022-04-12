@@ -18,7 +18,8 @@ struct Liste
 };
 
 int indexGlobal;
-
+int longueur;
+int condition;
 Liste* initialisation();
 
 
@@ -28,8 +29,11 @@ void afficherListe(Liste *liste);
 
 int adresse(Liste* liste,char *nom);
 
+int adresse_length(Liste* liste,int length);
 
+void supression (Liste *liste);
 
+int length_file (FILE *F);
 
 
 

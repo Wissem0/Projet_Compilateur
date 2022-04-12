@@ -1,0 +1,6 @@
+AFF [@1] 4
+COP [@0] [@1] 
+AFF [@2] 2
+AFF [@3] 3
+SOU [@2] [@3] 
+JMPF Label 5

@@ -1,3 +1,11 @@
 main() {
-    int a = 4, b = a, c, toto = 23;
+    
+    int a = 4 ;
+
+    if (2 == 3){
+
+    }
+    else{
+        
+    }
     }

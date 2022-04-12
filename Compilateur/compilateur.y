@@ -11,10 +11,11 @@ Liste *Tablesbl;
 FILE *F ;
 %}
 %union { int nb; char *var; }
-%token tFL tEQUAL tPO tPC tMINUS tADD tDIV tMUL tMAIN tIF tWHILE tFOR tBRAO tBRAC tRET 
+%token tFL tEQUAL tPO tPC tMINUS tADD tDIV tMUL tMAIN tWHILE tFOR tBRAO tBRAC tRET 
 tSEMC tELSE tINT tCONST tCOL tERROR tCOMP tCOMPG tCOMPL tCOMA tPRINTF
-%token <nb> tNB
-%token <var> tID
+%token <nb> tNB tIF
+%token <var> tID 
+%type <nb> Expr 
 %left tSEMC
 %right tEQUAL tADD tMINUS tMUL tDIV
 
@@ -23,10 +24,13 @@ tSEMC tELSE tINT tCONST tCOL tERROR tCOMP tCOMPG tCOMPL tCOMA tPRINTF
 Main 			: tMAIN tPO tPC { 
 								printf("Main detecte\n"); 
 								Tablesbl = initialisation(); 
-								F = fopen("assembleur","w");
-								indexGlobal =0;}
+								F = fopen("assembleur","w+");
+								indexGlobal =0;
+								}
 								Body
-				{ printf("Prog detecte\n");}
+								{ 
+								printf("Prog detecte\n");
+								}
 				;
 
 Body 			: tBRAO Declarations Ins tBRAC 
@@ -36,17 +40,50 @@ Declarations  	: Decl Declarations
 				|
 				;
 
-Decl 			: tINT tID {insertion(Tablesbl, "int", indexGlobal,$2); afficherListe(Tablesbl);} Suite 
-				| tCONST tID {insertion(Tablesbl, "const int", indexGlobal,$2); afficherListe(Tablesbl);} Suite 
+Decl 			: tINT tID {
+							supression(Tablesbl);
+							insertion(Tablesbl, "int", indexGlobal,$2);
+ 							afficherListe(Tablesbl);
+ 							} 
+							Suite 
+				| tCONST tID{
+							supression(Tablesbl);
+							insertion(Tablesbl, "const int", indexGlobal,$2);
+							afficherListe(Tablesbl);
+							}
+							Suite 
 				;
 Suite 			: tSEMC
+				{
+			    fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
+				supression(Tablesbl);
+				}
 				| tCOMA SDecl
 				| tEQUAL Expr tSEMC
-				| tEQUAL Expr tCOMA SDecl
+				{
+			    fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
+				supression(Tablesbl);
+				}
+				| tEQUAL Expr tCOMA 
+				{
+			    fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
+				supression(Tablesbl);
+				}
+				SDecl
 				;
 
-SDecl 			: tID  {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);}  Suite
-				| tID tEQUAL {insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1); afficherListe(Tablesbl);}  Expr  Suite
+SDecl 			: tID  {
+						insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1);
+						afficherListe(Tablesbl);
+						}  
+						Suite
+
+				| tID tEQUAL 
+						{
+						insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1);
+						afficherListe(Tablesbl);
+						}  
+						Expr  Suite
 				;
 
 Ins  			: Expr  tSEMC Ins
@@ -55,20 +92,65 @@ Ins  			: Expr  tSEMC Ins
 				|
 				;
 
-Condition 		: tIF tPO Expr Operateur Expr tPC tBRAO Ins tBRAC tELSE tBRAO Ins tBRAC
-				;
-
-Operateur 		: tCOMP 
+Condition 		: tIF tPO Expr Operateur Expr 
+											{
+											fprintf(F,"SOU [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
+											rewind(F);
+											int length = length_file(F);
+											if (condition == 1)
+												fprintf(F,"JMPF Label ");
+											$1 = length;
+											}
+											tPC tBRAO Ins 
+											{
+											rewind(F);
+											int length = length_file(F);
+											} 
+											tBRAC tELSE tBRAO Ins tBRAC
+											;
+								
+   
+Operateur       : tCOMP	
+						{
+						condition = 1;
+						}						
 				| tCOMPG
+						{
+						condition = 2;
+						}	
 				| tCOMPL
+						{
+						condition = 3;
+						}	
 				;
 
-Expr 			: tID {printf("AFF adresse1:%d  adresse2:%d\n",Tablesbl->premier->adresse, adresse(Tablesbl,$1));}
-				| tNB {printf("AFF adresse:%d %d\n ",Tablesbl->premier->adresse,$1);}
+Expr 			: tID 	{
+					 	fprintf(F,"AFF [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,$1));
+					  	}
+				| tNB 	{
+						insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable");
+					  	fprintf(F,"AFF [@%d] %d\n",indexGlobal-1,$1);
+						$$ = indexGlobal-1;
+						}
 				| Expr tADD Expr
+						{
+					    fprintf(F,"ADD [@%d] [@%d] [@%d]\n",$1,$1,$3 );
+						$$ = $1;
+						supression(Tablesbl);
+			
+						}
 				| Expr tMINUS Expr
+						{
+						fprintf(F,"SOU [@%d] [@%d] [@%d]\n",$1,$1,$3 );
+						$$ = $1;
+						supression(Tablesbl);	
+						}
 				| Expr tMUL Expr
-				| Expr tDIV Expr
+						{
+						fprintf(F,"MUL [@%d] [@%d] [@%d]\n",$1,$1,$3 );
+						$$ = $1;
+						supression(Tablesbl);	
+						}
 %%
 void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 
