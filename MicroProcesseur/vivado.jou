@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue May 10 09:36:17 2022
+# Process ID: 3701
+# Current directory: /home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur
+# Command line: vivado
+# Log file: /home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/vivado.log
+# Journal file: /home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Test_Bench_Register [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Bench_Register [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source Test_Bench_Register.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sim_1/new/Test_MicroProcesseur.vhd w ]
+add_files -fileset sim_1 /home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sim_1/new/Test_MicroProcesseur.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Test_Memoire_donnee [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top MicroProcesseur [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+source Test_Memoire_donnee.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Test_MicroProcesseur [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_simulation
+source Test_MicroProcesseur.tcl
+close_sim
+launch_simulation
+current_sim simulation_2
+launch_simulation
+source Test_MicroProcesseur.tcl
+close_sim
+launch_simulation
+source Test_MicroProcesseur.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1

@@ -75,9 +75,12 @@ begin
                QA <= tab(to_integer(unsigned(Ad_A)));
                QB <= tab(to_integer(unsigned(Ad_B)));
   else    
+               tab(to_integer(unsigned(Ad_W))) <= Data;
                QA <= tab(to_integer(unsigned(Ad_A)));
                QB <= tab(to_integer(unsigned(Ad_B)));    
-               tab(to_integer(unsigned(Ad_W))) <= Data ;         
+               
+                
+                       
  end if;          
 
 end process;

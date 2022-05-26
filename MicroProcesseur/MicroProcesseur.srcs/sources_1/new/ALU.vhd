@@ -64,7 +64,7 @@ when "010" => Aux <=  std_logic_vector(to_unsigned((to_integer(unsigned(A)) * to
 when "011" => Aux <= A OR B ;
 when "100" => Aux <= A AND B;
 when "101" => Aux <= A;
-when others => Null;
+when others => Aux <= "00000000";
 end case;
 
 

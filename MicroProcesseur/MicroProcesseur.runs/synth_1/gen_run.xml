@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1649754246">
-  <File Type="VDS-TIMING-PB" Name="ALU_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ALU_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="ALU.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="ALU_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="ALU_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="ALU_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="ALU.vds"/>
-  <File Type="REPORTS-TCL" Name="ALU_reports.tcl"/>
-  <File Type="PA-TCL" Name="ALU.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1653564195">
+  <File Type="VDS-TIMING-PB" Name="MicroProcesseur_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="MicroProcesseur_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="MicroProcesseur.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="MicroProcesseur_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="MicroProcesseur_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="MicroProcesseur_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="MicroProcesseur.vds"/>
+  <File Type="REPORTS-TCL" Name="MicroProcesseur_reports.tcl"/>
+  <File Type="PA-TCL" Name="MicroProcesseur.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
@@ -17,9 +17,45 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Bench_Register.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/EX_Mem.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/LI_DI.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Memoire_donnee.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Memoire_instruction.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MicroProcesseur.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ALU"/>
+      <Option Name="TopModule" Val="MicroProcesseur"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

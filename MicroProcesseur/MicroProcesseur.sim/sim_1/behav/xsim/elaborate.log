@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 6268b67f41b74a34b6bbffac371fbc58 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_Bench_Register_behav xil_defaultlib.Test_Bench_Register -log elaborate.log 
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 6268b67f41b74a34b6bbffac371fbc58 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_MicroProcesseur_behav xil_defaultlib.Test_MicroProcesseur -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,9 +10,15 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Memoire_instruction [memoire_instruction_default]
+Compiling architecture behavioral of entity xil_defaultlib.LI_DI [li_di_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.EX_Mem [ex_mem_default]
 Compiling architecture behavioral of entity xil_defaultlib.Bench_Register [bench_register_default]
-Compiling architecture behavioral of entity xil_defaultlib.test_bench_register
-Built simulation snapshot Test_Bench_Register_behav
+Compiling architecture behavioral of entity xil_defaultlib.Memoire_donnee [memoire_donnee_default]
+Compiling architecture behavioral of entity xil_defaultlib.MicroProcesseur [microprocesseur_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_microprocesseur
+Built simulation snapshot Test_MicroProcesseur_behav

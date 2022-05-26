@@ -88,10 +88,10 @@ Test_Clock <= not(Test_Clock);
 wait for Clock_period/2;
 end process;
 -- Stimulus process
-Test_Reset <= '1', '0' after 20 ns;
-Test_Data <= "00000000", "10000000" after 20 ns;
-Test_Ad_W <="0000", "0000" after 20 ns;
-Test_W <= '1' after 20 ns, '0' after 40 ns;
-Test_Ad_A <= "0000" after 40 ns;
-Test_Ad_B <= "0001" after 40 ns;
+Test_Reset <= '1', '0' after 20ns ;
+Test_Data <= "10000101" after 20ns ;
+Test_Ad_W <="0001" after 20ns ;
+Test_W <= '1' after 20ns ;
+Test_Ad_A <= "0000" after 20ns ;
+Test_Ad_B <= "0001" after 20ns ;
 end Behavioral;
