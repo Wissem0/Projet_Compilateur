@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri May 27 09:41:22 2022
+# Process ID: 2018
+# Current directory: /home/sedira/Insa-prog/projet_sys/Projet_Compilateur
+# Command line: vivado
+# Log file: /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/vivado.log
+# Journal file: /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source Test_MicroProcesseur.tcl
+relaunch_sim

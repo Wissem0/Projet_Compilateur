@@ -78,8 +78,9 @@ void yyerror(char *s);
 
 Liste *Tablesbl;
 FILE *F ;
+int labels[MAX_SIZE];
 
-#line 83 "y.tab.c"
+#line 84 "y.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -191,10 +192,10 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 13 "compilateur.y"
+#line 14 "compilateur.y"
  int nb; char *var; 
 
-#line 198 "y.tab.c"
+#line 199 "y.tab.c"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -518,11 +519,11 @@ union yyalloc
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  31
 /* YYNNTS -- Number of nonterminals.  */
-#define YYNNTS  21
+#define YYNNTS  22
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  36
+#define YYNRULES  37
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  76
+#define YYNSTATES  79
 
 #define YYUNDEFTOK  2
 #define YYMAXUTOK   285
@@ -572,10 +573,10 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    24,    24,    24,    36,    39,    40,    43,    43,    49,
-      49,    56,    61,    62,    68,    67,    75,    75,    82,    81,
-      89,    90,    91,    91,    92,    96,   105,   113,    95,   123,
-     127,   131,   137,   140,   145,   152,   158
+       0,    25,    25,    25,    37,    40,    41,    44,    44,    50,
+      50,    57,    62,    63,    69,    68,    76,    76,    83,    82,
+      90,    91,    92,    92,    93,    97,   106,   117,    96,   130,
+     134,   138,   144,   145,   150,   157,   166,   172
 };
 #endif
 
@@ -590,7 +591,7 @@ static const char *const yytname[] =
   "tCOMPG", "tCOMPL", "tCOMA", "tPRINTF", "tNB", "tIF", "tID", "$accept",
   "Main", "$@1", "Body", "Declarations", "Decl", "$@2", "$@3", "Suite",
   "$@4", "SDecl", "$@5", "$@6", "Ins", "$@7", "Condition", "$@8", "$@9",
-  "$@10", "Operateur", "Expr", YY_NULLPTR
+  "$@10", "Operateur", "Aff", "Expr", YY_NULLPTR
 };
 #endif
 
@@ -606,7 +607,7 @@ static const yytype_int16 yytoknum[] =
 };
 # endif
 
-#define YYPACT_NINF (-25)
+#define YYPACT_NINF (-24)
 
 #define yypact_value_is_default(Yyn) \
   ((Yyn) == YYPACT_NINF)
@@ -620,14 +621,14 @@ static const yytype_int16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      -7,     3,    13,     4,   -25,   -25,     9,    10,   -25,    -4,
-       1,    21,    10,   -25,   -25,    29,   -25,    33,   -25,    30,
-      21,    36,   -25,    -1,    -1,    24,    -8,   -25,   -25,    -8,
-      -8,    -8,    21,    -8,   -25,    34,   -25,   -25,    54,    32,
-      51,    51,    51,   -25,    11,    58,   -25,   -25,   -25,   -25,
-     -25,    -8,   -25,   -25,   -25,    -1,    21,    51,    34,    -8,
-     -25,   -25,    57,   -25,     7,    52,   -25,    21,   -25,    50,
-      49,    55,    21,   -25,    53,   -25
+      -6,     3,    20,    18,   -24,   -24,    36,    33,   -24,    -1,
+      17,   -16,    33,   -24,   -24,    27,    43,    50,    40,   -16,
+     -16,   -24,     0,     0,    30,    15,    15,   -24,   -24,   -24,
+      15,   -24,    31,   -24,   -24,    56,   -24,   -24,    34,     8,
+      23,    59,   -24,   -24,    15,    15,    15,   -24,   -24,   -24,
+      15,   -24,   -24,   -24,   -24,     0,   -16,    28,    28,    28,
+      28,    31,    15,   -24,   -24,    58,   -24,     2,    51,   -24,
+     -16,   -24,    52,    48,    54,   -16,   -24,    55,   -24
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -636,29 +637,29 @@ static const yytype_int8 yypact[] =
 static const yytype_int8 yydefact[] =
 {
        0,     0,     0,     0,     1,     2,     0,     6,     3,     0,
-       0,    24,     6,     7,     9,     0,    33,     0,    32,     0,
-      24,     0,     5,     0,     0,     0,     0,     4,    21,     0,
-       0,     0,    24,     0,    11,     0,     8,    10,     0,     0,
-      35,    34,    36,    20,     0,    16,    12,    22,    29,    30,
-      31,     0,    13,    14,    18,     0,    24,    25,     0,     0,
-      17,    23,     0,    15,     0,     0,    19,    24,    26,     0,
-       0,     0,    24,    27,     0,    28
+       0,    24,     6,     7,     9,     0,     0,     0,     0,    24,
+      24,     5,     0,     0,     0,     0,     0,     4,    21,    20,
+       0,    11,     0,     8,    10,     0,    34,    33,     0,     0,
+       0,    16,    12,    22,     0,     0,     0,    29,    30,    31,
+       0,    32,    13,    14,    18,     0,    24,    36,    35,    37,
+      25,     0,     0,    17,    23,     0,    15,     0,     0,    19,
+      24,    26,     0,     0,     0,    24,    27,     0,    28
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -25,   -25,   -25,   -25,    59,   -25,   -25,   -25,   -23,   -25,
-      12,   -25,   -25,   -20,   -25,   -25,   -25,   -25,   -25,   -25,
-     -24
+     -24,   -24,   -24,   -24,    57,   -24,   -24,   -24,   -21,   -24,
+      10,   -24,   -24,   -19,   -24,   -24,   -24,   -24,   -24,   -24,
+     -24,   -23
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     2,     6,     8,    11,    12,    23,    24,    36,    58,
-      46,    55,    59,    19,    56,    20,    62,    69,    74,    51,
-      21
+      -1,     2,     6,     8,    11,    12,    22,    23,    33,    61,
+      42,    55,    62,    18,    56,    19,    65,    72,    77,    50,
+      20,    38
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -666,26 +667,26 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int8 yytable[] =
 {
-      28,    37,    39,    33,     1,    40,    41,    42,     3,    44,
-       5,    33,    43,     4,    29,    30,    34,    31,    29,    30,
-      16,    31,    18,     7,    34,    35,    13,    57,    52,     9,
-      10,    14,    60,    35,    25,    64,    61,    53,    26,    29,
-      30,    66,    31,    29,    30,    27,    31,    68,    15,    16,
-      17,    18,    73,    32,    38,    48,    49,    50,    29,    30,
-      47,    31,    54,    65,    45,    70,    67,    71,    75,    72,
-      63,    22
+      28,    29,    34,    39,    30,     1,    30,    40,     3,    44,
+      45,    15,    46,    16,    17,    44,    45,    31,    46,    31,
+       4,    57,    58,    59,     5,    51,    32,    60,    32,    13,
+      44,    45,    24,    46,    63,    44,    45,    64,    46,    67,
+      52,    44,    45,    36,    46,    37,    69,    14,    25,    53,
+       7,    71,     9,    10,    26,    27,    76,    47,    48,    49,
+      35,    41,    43,    54,    68,    70,    74,    73,    75,    21,
+      78,    66
 };
 
 static const yytype_int8 yycheck[] =
 {
-      20,    24,    26,     4,    11,    29,    30,    31,     5,    33,
-       6,     4,    32,     0,     7,     8,    17,    10,     7,     8,
-      28,    10,    30,    14,    17,    26,    30,    51,    17,    19,
-      20,    30,    55,    26,     5,    59,    56,    26,     5,     7,
-       8,    64,    10,     7,     8,    15,    10,    67,    27,    28,
-      29,    30,    72,    17,    30,    23,    24,    25,     7,     8,
-       6,    10,     4,     6,    30,    15,    14,    18,    15,    14,
-      58,    12
+      19,    20,    23,    26,     4,    11,     4,    30,     5,     7,
+       8,    27,    10,    29,    30,     7,     8,    17,    10,    17,
+       0,    44,    45,    46,     6,    17,    26,    50,    26,    30,
+       7,     8,     5,    10,    55,     7,     8,    56,    10,    62,
+      17,     7,     8,    28,    10,    30,    67,    30,     5,    26,
+      14,    70,    19,    20,     4,    15,    75,    23,    24,    25,
+      30,    30,     6,     4,     6,    14,    18,    15,    14,    12,
+      15,    61
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -693,13 +694,13 @@ static const yytype_int8 yycheck[] =
 static const yytype_int8 yystos[] =
 {
        0,    11,    32,     5,     0,     6,    33,    14,    34,    19,
-      20,    35,    36,    30,    30,    27,    28,    29,    30,    44,
-      46,    51,    35,    37,    38,     5,     5,    15,    44,     7,
-       8,    10,    17,     4,    17,    26,    39,    39,    30,    51,
-      51,    51,    51,    44,    51,    30,    41,     6,    23,    24,
-      25,    50,    17,    26,     4,    42,    45,    51,    40,    43,
-      39,    44,    47,    41,    51,     6,    39,    14,    44,    48,
-      15,    18,    14,    44,    49,    15
+      20,    35,    36,    30,    30,    27,    29,    30,    44,    46,
+      51,    35,    37,    38,     5,     5,     4,    15,    44,    44,
+       4,    17,    26,    39,    39,    30,    28,    30,    52,    52,
+      52,    30,    41,     6,     7,     8,    10,    23,    24,    25,
+      50,    17,    17,    26,     4,    42,    45,    52,    52,    52,
+      52,    40,    43,    39,    44,    47,    41,    52,     6,    39,
+      14,    44,    48,    15,    18,    14,    44,    49,    15
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
@@ -708,7 +709,7 @@ static const yytype_int8 yyr1[] =
        0,    31,    33,    32,    34,    35,    35,    37,    36,    38,
       36,    39,    39,    39,    40,    39,    42,    41,    43,    41,
       44,    44,    45,    44,    44,    47,    48,    49,    46,    50,
-      50,    50,    51,    51,    51,    51,    51
+      50,    50,    51,    52,    52,    52,    52,    52
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -716,8 +717,8 @@ static const yytype_int8 yyr2[] =
 {
        0,     2,     0,     5,     4,     2,     0,     0,     4,     0,
        4,     1,     2,     3,     0,     5,     0,     3,     0,     5,
-       3,     2,     0,     6,     0,     0,     0,     0,    16,     1,
-       1,     1,     1,     1,     3,     3,     3
+       2,     2,     0,     6,     0,     0,     0,     0,    16,     1,
+       1,     1,     4,     1,     1,     3,     3,     3
 };
 
 
@@ -1413,97 +1414,97 @@ yyreduce:
   switch (yyn)
     {
   case 2:
-#line 24 "compilateur.y"
+#line 25 "compilateur.y"
                                         { 
 									printf("Main detecte\n"); 
 									Tablesbl = initialisation(); 
 									F = fopen("assembleur","w+");
 									indexGlobal = 0;
 								}
-#line 1424 "y.tab.c"
+#line 1425 "y.tab.c"
     break;
 
   case 3:
-#line 31 "compilateur.y"
+#line 32 "compilateur.y"
                                                                 { 
 									printf("Prog detecte\n");
 								}
-#line 1432 "y.tab.c"
+#line 1433 "y.tab.c"
     break;
 
   case 7:
-#line 43 "compilateur.y"
+#line 44 "compilateur.y"
                                    {
 								supression(Tablesbl);
 								insertion(Tablesbl, "int", indexGlobal,(yyvsp[0].var));
 								afficherListe(Tablesbl);
  							}
-#line 1442 "y.tab.c"
+#line 1443 "y.tab.c"
     break;
 
   case 9:
-#line 49 "compilateur.y"
+#line 50 "compilateur.y"
                                             {
 								supression(Tablesbl);
 								insertion(Tablesbl, "const int", indexGlobal,(yyvsp[0].var));
 								afficherListe(Tablesbl);
 							}
-#line 1452 "y.tab.c"
+#line 1453 "y.tab.c"
     break;
 
   case 11:
-#line 57 "compilateur.y"
+#line 58 "compilateur.y"
                                 {
 					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 					supression(Tablesbl);
 				}
-#line 1461 "y.tab.c"
+#line 1462 "y.tab.c"
     break;
 
   case 13:
-#line 63 "compilateur.y"
+#line 64 "compilateur.y"
                                 {
 					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 					supression(Tablesbl);
 				}
-#line 1470 "y.tab.c"
+#line 1471 "y.tab.c"
     break;
 
   case 14:
-#line 68 "compilateur.y"
+#line 69 "compilateur.y"
                                 {
 					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 					supression(Tablesbl);
 				}
-#line 1479 "y.tab.c"
+#line 1480 "y.tab.c"
     break;
 
   case 16:
-#line 75 "compilateur.y"
+#line 76 "compilateur.y"
                                {
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,(yyvsp[0].var));
 							afficherListe(Tablesbl);
 						}
-#line 1488 "y.tab.c"
+#line 1489 "y.tab.c"
     break;
 
   case 18:
-#line 82 "compilateur.y"
+#line 83 "compilateur.y"
                                                 {
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,(yyvsp[-1].var));
 							afficherListe(Tablesbl);
 						}
-#line 1497 "y.tab.c"
+#line 1498 "y.tab.c"
     break;
 
   case 22:
-#line 91 "compilateur.y"
+#line 92 "compilateur.y"
                                                       {;}
-#line 1503 "y.tab.c"
+#line 1504 "y.tab.c"
     break;
 
   case 25:
-#line 96 "compilateur.y"
+#line 97 "compilateur.y"
                                                                                         {
 												fprintf(F,"SOU [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 												rewind(F);
@@ -1512,107 +1513,119 @@ yyreduce:
 													fprintf(F,"JMPF Label1\n");
 												(yyvsp[-4].nb) = length;
 											}
-#line 1516 "y.tab.c"
+#line 1517 "y.tab.c"
     break;
 
   case 26:
-#line 105 "compilateur.y"
+#line 106 "compilateur.y"
                                                                                         {
+												
 												rewind(F);
 												int current = length_file(F);
-												// patch($1,current+2);
+												printf(" LONGEUR FICHIER %d\n\n",current);
+												patch((yyvsp[-8].nb),current+2);
 												fprintf(F,"JMP Label2\n");
 												(yyvsp[-8].nb) = current;
+												fprintf(F,"Label1 :\n");
 											}
-#line 1528 "y.tab.c"
+#line 1532 "y.tab.c"
     break;
 
   case 27:
-#line 113 "compilateur.y"
+#line 117 "compilateur.y"
                                                                                         {
 												rewind(F);
 												int current = length_file(F);
-												// patch($1,current+1);
-
+												patch((yyvsp[-13].nb),current+1);
+												for (int i =0 ; i < 20 ; i ++){
+													printf("FROM %d TO %d\n",i,labels[i]);
+												}
+												fprintf(F,"Label2 :\n");
 											}
-#line 1539 "y.tab.c"
+#line 1546 "y.tab.c"
     break;
 
   case 29:
-#line 124 "compilateur.y"
+#line 131 "compilateur.y"
                                                 {
 						condition = 1;
 						}
-#line 1547 "y.tab.c"
+#line 1554 "y.tab.c"
     break;
 
   case 30:
-#line 128 "compilateur.y"
+#line 135 "compilateur.y"
                                                 {
 						condition = 2;
 						}
-#line 1555 "y.tab.c"
+#line 1562 "y.tab.c"
     break;
 
   case 31:
-#line 132 "compilateur.y"
+#line 139 "compilateur.y"
                                                 {
 						condition = 3;
 						}
-#line 1563 "y.tab.c"
-    break;
-
-  case 32:
-#line 137 "compilateur.y"
-                                {
-							fprintf(F,"AFF [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,(yyvsp[0].var)));
-					  	}
-#line 1571 "y.tab.c"
+#line 1570 "y.tab.c"
     break;
 
   case 33:
-#line 140 "compilateur.y"
+#line 145 "compilateur.y"
+                                {	
+							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable");
+							fprintf(F,"COP [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,(yyvsp[0].var)));
+							(yyval.nb) = indexGlobal-1;						
+					  	}
+#line 1580 "y.tab.c"
+    break;
+
+  case 34:
+#line 150 "compilateur.y"
                                         {
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable");
 							fprintf(F,"AFF [@%d] %d\n",indexGlobal-1,(yyvsp[0].nb));
 							(yyval.nb) = indexGlobal-1;
-						}
-#line 1581 "y.tab.c"
-    break;
-
-  case 34:
-#line 146 "compilateur.y"
-                                                {
-							fprintf(F,"ADD [@%d] [@%d] [@%d]\n",(yyvsp[-2].nb),(yyvsp[-2].nb),(yyvsp[0].nb) );
-							(yyval.nb) = (yyvsp[-2].nb);
-							supression(Tablesbl);
-			
+							printf("coucou\n");
+							afficherListe(Tablesbl);
 						}
 #line 1592 "y.tab.c"
     break;
 
   case 35:
-#line 153 "compilateur.y"
+#line 158 "compilateur.y"
+                                                {
+							printf("ADD------------------------\n");
+							afficherListe(Tablesbl);
+							fprintf(F,"ADD [@%d] [@%d] [@%d]\n",(yyvsp[-2].nb),(yyvsp[-2].nb),(yyvsp[0].nb) );
+							(yyval.nb) = (yyvsp[-2].nb);
+							supression(Tablesbl);
+			
+						}
+#line 1605 "y.tab.c"
+    break;
+
+  case 36:
+#line 167 "compilateur.y"
                                                 {
 							fprintf(F,"SOU [@%d] [@%d] [@%d]\n",(yyvsp[-2].nb),(yyvsp[-2].nb),(yyvsp[0].nb) );
 							(yyval.nb) = (yyvsp[-2].nb);
 							supression(Tablesbl);	
 						}
-#line 1602 "y.tab.c"
+#line 1615 "y.tab.c"
     break;
 
-  case 36:
-#line 159 "compilateur.y"
+  case 37:
+#line 173 "compilateur.y"
                                                 {
 							fprintf(F,"MUL [@%d] [@%d] [@%d]\n",(yyvsp[-2].nb),(yyvsp[-2].nb),(yyvsp[0].nb) );
 							(yyval.nb) = (yyvsp[-2].nb);
 							supression(Tablesbl);	
 						}
-#line 1612 "y.tab.c"
+#line 1625 "y.tab.c"
     break;
 
 
-#line 1616 "y.tab.c"
+#line 1629 "y.tab.c"
 
       default: break;
     }
@@ -1844,11 +1857,13 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 164 "compilateur.y"
+#line 178 "compilateur.y"
 
 void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 
-
+void patch (int from, int to){
+	labels[from] = to;
+}
 int main(void) {
   printf("Programme\n"); // yydebug=1;
   yyparse();

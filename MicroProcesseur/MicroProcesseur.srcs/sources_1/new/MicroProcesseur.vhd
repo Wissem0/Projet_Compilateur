@@ -170,7 +170,7 @@ signal LC_ALU : STD_LOGIC_VECTOR (2 downto 0);
 -- Sorties mem de données
 signal Sortie_OUT_Mem_des_donnees : STD_LOGIC_VECTOR (7 downto 0);
 signal Sortie_MUX_Mem_des_donnees : STD_LOGIC_VECTOR (7 downto 0);
-signal Sortie_MUX_Mem_des_donnees_entre : STD_LOGIC_VECTOR (7 downto 0);
+signal Sortie_MUX_Mem_des_donnees_entree : STD_LOGIC_VECTOR (7 downto 0);
 
 --LC Mem des données
 signal LC_Mem_des_donnees : STD_LOGIC;
@@ -294,7 +294,7 @@ LC_Mem_des_donnees <= '0' when to_integer(unsigned(Sortie_op_EX_Mem)) = 8 else
       '1';
       
 -- Mux de la mémoire de données pour l'entrée 
-Sortie_MUX_Mem_des_donnees_entre <= Sortie_A_EX_Mem when to_integer(unsigned(Sortie_op_EX_Mem)) = 8 else
+Sortie_MUX_Mem_des_donnees_entree <= Sortie_A_EX_Mem when to_integer(unsigned(Sortie_op_EX_Mem)) = 8 else
      Sortie_B_EX_Mem;
      
 -- Mux de la mémoire de données pour la sortie 
@@ -306,7 +306,7 @@ Memoire_donnee_a: Memoire_donnee
 port map ( 
 Reset => '0',
 RW => LC_Mem_des_donnees,
-Adresse => Sortie_MUX_Mem_des_donnees_entre,
+Adresse => Sortie_MUX_Mem_des_donnees_entree,
 Entre => Sortie_B_EX_Mem,
 Clock => Clock,
 Sortie => Sortie_OUT_Mem_des_donnees

@@ -260,3 +260,21 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Archi
 INFO: [VRFC 10-307] analyzing entity Memoire_instruction
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sim_1/new/Test_MicroProcesseur.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Test_MicroProcesseur
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_Register
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity EX_Mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LI_DI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_donnee
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sim_1/new/Test_MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MicroProcesseur
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur

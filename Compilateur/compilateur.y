@@ -9,6 +9,7 @@ void yyerror(char *s);
 
 Liste *Tablesbl;
 FILE *F ;
+int labels[MAX_SIZE];
 %}
 %union { int nb; char *var; }
 %token tFL tEQUAL tPO tPC tMINUS tADD tDIV tMUL tMAIN tWHILE tFOR tBRAO tBRAC tRET 
@@ -86,7 +87,7 @@ SDecl 			: tID  {
 						Expr  Suite
 				;
 
-Ins  			: Expr  tSEMC Ins
+Ins  			: Aff Ins
 	 			| Condition Ins
 				| tPRINTF tPO tID tPC {;} Ins
 				|
@@ -98,25 +99,32 @@ Condition 		: tIF tPO Expr Operateur Expr
 												rewind(F);
 												int length = length_file(F);
 												if (condition == 1)
-													fprintf(F,"JMPF Label1\n");
+													fprintf(F,"JMPF \n");
 												$1 = length;
 											}
 											tPC tBRAO Ins 
 											{
+												
 												rewind(F);
 												int current = length_file(F);
-												// patch($1,current+2);
-												fprintf(F,"JMP Label2\n");
+												printf(" LONGEUR FICHIER %d\n\n",current);
+												patch($1,current+2);
+
+												fprintf(F,"JMP \n");
 												$1 = current;
 											} 
 											tBRAC tELSE tBRAO Ins
 											{
 												rewind(F);
 												int current = length_file(F);
-												// patch($1,current+1);
+												patch($1,current+1);
+												for (int i =0 ; i < 20 ; i ++){
+													printf("FROM %d TO %d\n",i,labels[i]);
+												}
 
 											}
 											 tBRAC
+											 
 											;
 								
    
@@ -134,16 +142,23 @@ Operateur       : tCOMP
 						}	
 				;
 
-Expr 			: tID 	{
-							fprintf(F,"AFF [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,$1));
+Aff             : tID tEQUAL Expr tSEMC
+Expr 			: tID 	{	
+							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable");
+							fprintf(F,"COP [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,$1));
+							$$ = indexGlobal-1;						
 					  	}
 				| tNB 	{
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable");
 							fprintf(F,"AFF [@%d] %d\n",indexGlobal-1,$1);
 							$$ = indexGlobal-1;
+							printf("coucou\n");
+							afficherListe(Tablesbl);
 						}
 				| Expr tADD Expr
 						{
+							printf("ADD------------------------\n");
+							afficherListe(Tablesbl);
 							fprintf(F,"ADD [@%d] [@%d] [@%d]\n",$1,$1,$3 );
 							$$ = $1;
 							supression(Tablesbl);
@@ -164,7 +179,9 @@ Expr 			: tID 	{
 %%
 void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 
-
+void patch (int from, int to){
+	labels[from] = to;
+}
 int main(void) {
   printf("Programme\n"); // yydebug=1;
   yyparse();

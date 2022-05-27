@@ -1,7 +1,7 @@
 #ifndef _SYMBOL_H
 #define _SYMBOL_H
 
-
+#define MAX_SIZE 10000
 typedef struct Element Element;
 struct Element
 {

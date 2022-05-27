@@ -1,0 +1,146 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri May 27 09:41:22 2022
+# Process ID: 2018
+# Current directory: /home/sedira/Insa-prog/projet_sys/Projet_Compilateur
+# Command line: vivado
+# Log file: /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/vivado.log
+# Journal file: /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.xpr
+INFO: [Project 1-313] Project file moved from '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 6137.121 ; gain = 105.688 ; free physical = 12146 ; free virtual = 23003
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_MicroProcesseur' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_MicroProcesseur_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_Register
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity EX_Mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LI_DI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_donnee
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sim_1/new/Test_MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MicroProcesseur
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 6268b67f41b74a34b6bbffac371fbc58 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_MicroProcesseur_behav xil_defaultlib.Test_MicroProcesseur -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.Memoire_instruction [memoire_instruction_default]
+Compiling architecture behavioral of entity xil_defaultlib.LI_DI [li_di_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.EX_Mem [ex_mem_default]
+Compiling architecture behavioral of entity xil_defaultlib.Bench_Register [bench_register_default]
+Compiling architecture behavioral of entity xil_defaultlib.Memoire_donnee [memoire_donnee_default]
+Compiling architecture behavioral of entity xil_defaultlib.MicroProcesseur [microprocesseur_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_microprocesseur
+Built simulation snapshot Test_MicroProcesseur_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_MicroProcesseur_behav -key {Behavioral:sim_1:Functional:Test_MicroProcesseur} -tclbatch {Test_MicroProcesseur.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Test_MicroProcesseur.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_MicroProcesseur_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6245.773 ; gain = 78.605 ; free physical = 12022 ; free virtual = 23007
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_MicroProcesseur' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_MicroProcesseur_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 6268b67f41b74a34b6bbffac371fbc58 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_MicroProcesseur_behav xil_defaultlib.Test_MicroProcesseur -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.Memoire_instruction [memoire_instruction_default]
+Compiling architecture behavioral of entity xil_defaultlib.LI_DI [li_di_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.EX_Mem [ex_mem_default]
+Compiling architecture behavioral of entity xil_defaultlib.Bench_Register [bench_register_default]
+Compiling architecture behavioral of entity xil_defaultlib.Memoire_donnee [memoire_donnee_default]
+Compiling architecture behavioral of entity xil_defaultlib.MicroProcesseur [microprocesseur_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_microprocesseur
+Built simulation snapshot Test_MicroProcesseur_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.sim/sim_1/behav/xsim/xsim.dir/Test_MicroProcesseur_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri May 27 10:10:36 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 6247.797 ; gain = 0.000 ; free physical = 9521 ; free virtual = 21421
