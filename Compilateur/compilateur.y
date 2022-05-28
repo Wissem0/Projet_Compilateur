@@ -121,6 +121,7 @@ Condition 		: tIF tPO Expr Operateur Expr
 												for (int i =0 ; i < 20 ; i ++){
 													printf("FROM %d TO %d\n",i,labels[i]);
 												}
+												appliquerJump(F,labels);
 
 											}
 											 tBRAC

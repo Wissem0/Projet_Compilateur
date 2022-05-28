@@ -3,13 +3,11 @@ COP [@0] [@1]
 AFF [@2] 2
 AFF [@3] 3
 SOU [@2] [@3] 
-JMPF Label1
+JMPF  5 11
 COP [@4] [@0]
 AFF [@5] 1
 ADD [@4] [@4] [@5]
-JMP Label2
-Label1 :
+JMP  9 14
 COP [@6] [@0]
 AFF [@7] 2
 ADD [@6] [@6] [@7]
-Label2 :
