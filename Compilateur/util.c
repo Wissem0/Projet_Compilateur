@@ -3,7 +3,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include "util.h"
-
+#include "symbol.h"
 Liste_F *initialisation_F()
 {
     Liste_F *liste = malloc(sizeof(*liste));
@@ -37,7 +37,6 @@ void insertion_F(Liste_F *liste, char *chaine)
                     strcpy(liste->premier->chaine, chaine);
                     liste->premier->suivant = NULL;
                     longueur_F++;
-                    printf("coucou1: %s\n", chaine);
                 }
             else{
                 nouveau->chaine = (char *) malloc(50);
@@ -46,7 +45,6 @@ void insertion_F(Liste_F *liste, char *chaine)
             if(longueur_F == 1){
                 liste->premier->suivant = nouveau;
                 longueur_F++;
-                printf("coucou2: %s\n", chaine);
             }
             else{
             Temp = liste->premier;
@@ -78,6 +76,13 @@ void afficherListe_F(Liste_F *liste)
     printf("NULL\n");
 }
 
+
+void initialiserTableau( int labels[]){
+    for( int i = 0 ; i < MAX_SIZE ; i++ ){
+        labels[i] = 0;
+    }
+}
+
 void appliquerJump(Liste_F *F,int labels[]){
 
     fclose(F);
@@ -94,15 +99,16 @@ void appliquerJump(Liste_F *F,int labels[]){
     fclose(F);
     F = fopen("assembleur","w+");
     
-    int index = 0;
+    int index = 1;
     Element_F *actuel = listeChaine->premier;
 
     while (actuel != NULL)
     {
         if (labels[index] != 0)
             {
-            printf("%s\n" , actuel->chaine);
+            printf("JMB ?%s\n" , actuel->chaine);
             fprintf(F,"%s %d %d\n",actuel->chaine,index,labels[index]);
+            labels[index] = 0;
             }
         else{
         fprintf(F,"%s\n",actuel->chaine);
@@ -111,8 +117,6 @@ void appliquerJump(Liste_F *F,int labels[]){
         index++;
         
     }
-
-
 
 }
 

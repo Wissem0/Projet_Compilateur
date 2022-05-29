@@ -87,9 +87,8 @@ void insertion(Liste *liste, char *type, int adresse, char *nom)
             indexGlobal++;
             longueur++;
             }
-        printf("RAJOUT DE %s\n",nom);
-        printf("INDEX %d\n",indexGlobal);
-        afficherListe(liste);
+        // printf("RAJOUT DE %s\n",nom);
+        // printf("INDEX %d\n",indexGlobal);
         
 }
 
@@ -161,9 +160,8 @@ void supression (Liste *liste){
     longueur--;
     }
     
-    printf("SUPRESSION DE TETE \n");
-    printf("INDEX %d\n",indexGlobal);
-    afficherListe(liste);
+    // printf("SUPRESSION DE TETE \n");
+    // printf("INDEX %d\n",indexGlobal);
 
 }
 

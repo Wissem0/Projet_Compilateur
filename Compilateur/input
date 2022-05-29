@@ -1,11 +1,18 @@
 main() {
     
-    int a = 4 ;
-    
-    if ( 2 == 3){
-        a = a + 1;
+    int a = 0 ;
+    int b = 0;
+
+    while ( a < 10){
+
+    a = a + 1;
+        if (b < 10){
+        b = b + 5;    
+        }
+        else{
+        b = b + 3;      
+        }  
+
     }
-    else{
-        a = a + 2; 
-    }
+  
 }
