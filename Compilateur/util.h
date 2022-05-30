@@ -22,7 +22,7 @@ void insertion_F(Liste_F *liste, char *chaine);
 
 void afficherListe_F(Liste_F *liste);
 
-void appliquerJump(Liste_F *F,int labels[]);
+void appliquerJump(FILE *F,int labels[]);
 
 void initialiserTableau( int labels[]);
 #endif

@@ -7,6 +7,7 @@ struct Element
 {
     char *type;
 	int adresse;
+    int profondeur;
 	char *nom;
     Element *suivant;
 };
@@ -23,7 +24,7 @@ int condition;
 Liste* initialisation();
 
 
-void insertion(Liste *liste, char *type, int adresse, char *nom);
+void insertion(Liste *liste, char *type, int adresse, char *nom, int profondeur);
 
 void afficherListe(Liste *liste);
 
@@ -35,7 +36,9 @@ void supression (Liste *liste);
 
 int length_file (FILE *F);
 
+void supressionProfondeur (Liste *liste , int profondeur);
 
+void delete(Liste *liste, int key) ;
 
 
 

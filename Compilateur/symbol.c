@@ -14,6 +14,7 @@ Liste *initialisation()
     }   
 	element->type = NULL;
 	element->adresse = 0;
+    element->profondeur = 0;
 	element->nom = NULL;
     element->suivant = NULL;
     liste->premier = element;
@@ -53,7 +54,7 @@ else{
     }
 }
 
-void insertion(Liste *liste, char *type, int adresse, char *nom)
+void insertion(Liste *liste, char *type, int adresse, char *nom, int profondeur)
 {
 
        /* printf("erreur");
@@ -62,14 +63,27 @@ void insertion(Liste *liste, char *type, int adresse, char *nom)
             printf("ERREUR the variable ID is not unique");
             EXIT_FAILURE;
         }*/
-        
+            
+            
             Element *nouveau = malloc(sizeof(*nouveau));
-            if (liste == NULL || nouveau == NULL)
-            {
-                
-                exit(EXIT_FAILURE);
+            if (liste != NULL && liste->premier == NULL)
+            {    
+                Element *element = malloc(sizeof(*element));
+                if (liste == NULL || element == NULL)
+                {
+                    exit(EXIT_FAILURE);
+                }   
+                element->type = NULL;
+                element->adresse = 0;
+                element->profondeur = 0;
+                element->nom = NULL;
+                element->suivant = NULL;
+                liste->premier = element;
+                longueur = 0;
+                            
             }
-            if (indexGlobal == 0)
+
+            if (longueur == 0)
                 {
                     liste->premier->type = type;
                     liste->premier->nom  = nom;
@@ -79,6 +93,7 @@ void insertion(Liste *liste, char *type, int adresse, char *nom)
             else{
             nouveau->type = type;
             nouveau->adresse = adresse;
+            nouveau->profondeur = profondeur;
             nouveau->nom = nom;
 
             /* Insertion de l'élément au début de la liste */
@@ -106,6 +121,7 @@ void afficherListe(Liste *liste)
     {
 		printf("%s ", actuel->nom);
 		printf("%s ", actuel->type);
+        printf("%d ", actuel->profondeur);
 		printf("%d -> ", actuel->adresse);
         actuel = actuel->suivant;
     }
@@ -154,15 +170,14 @@ int adresse_length(Liste* liste,int length){
 
 void supression (Liste *liste){
 
-    if (liste != NULL && liste->premier != NULL && liste->premier->suivant != NULL)
+    if (liste != NULL && liste->premier != NULL )
     {
     liste->premier = liste->premier->suivant;
     longueur--;
     }
-    
+
     // printf("SUPRESSION DE TETE \n");
     // printf("INDEX %d\n",indexGlobal);
-
 }
 
 int length_file (FILE * F)
@@ -183,3 +198,68 @@ int length_file (FILE * F)
         
     return lines;
 }
+
+void supressionProfondeur (Liste *liste , int profondeur){
+
+    if (liste != NULL && liste->premier != NULL )
+    {  
+        Element *actuel = liste->premier;
+        Element *suivant = liste->premier->suivant;
+        if (suivant== NULL && actuel->profondeur == profondeur){
+            liste->premier = NULL;
+        }
+        while (suivant != NULL){
+
+        if (suivant->profondeur == profondeur)
+            {
+            actuel->suivant = suivant->suivant;
+            suivant = actuel->suivant;
+            }
+            else{
+                actuel = actuel->suivant;
+                suivant = suivant->suivant;
+            }
+        
+        }
+    // printf("SUPRESSION DE TETE \n");
+    // printf("INDEX %d\n",indexGlobal);
+}
+}
+
+void delete(Liste *liste, int key)
+{
+     
+    // Store head node
+    Element *temp = liste->premier;
+    Element *prev = NULL;
+     
+    // If head node itself holds
+    // the key to be deleted
+    if (temp != NULL && temp->profondeur == key)
+    {
+        liste->premier = temp->suivant; // Changed head
+        
+    }
+ 
+    // Else Search for the key to be deleted,
+    // keep track of the previous node as we
+    // need to change 'prev->next' */
+    else
+    {
+        while (temp != NULL && temp->profondeur != key)
+        {
+            prev = temp;
+            temp = temp->suivant;
+        }
+    
+        // If key was not present in linked list
+        if (temp == NULL)
+            return;
+    
+        // Unlink the node from linked list
+        prev->suivant = temp->suivant;
+    
+
+    }
+}
+

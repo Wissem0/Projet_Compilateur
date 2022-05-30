@@ -83,7 +83,7 @@ void initialiserTableau( int labels[]){
     }
 }
 
-void appliquerJump(Liste_F *F,int labels[]){
+void appliquerJump(FILE *F,int labels[]){
 
     fclose(F);
     F = fopen("assembleur","r");
@@ -106,7 +106,7 @@ void appliquerJump(Liste_F *F,int labels[]){
     {
         if (labels[index] != 0)
             {
-            printf("JMB ?%s\n" , actuel->chaine);
+            //printf("JMB ?%s\n" , actuel->chaine);
             fprintf(F,"%s %d %d\n",actuel->chaine,index,labels[index]);
             labels[index] = 0;
             }

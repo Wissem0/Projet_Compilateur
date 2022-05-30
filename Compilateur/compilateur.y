@@ -9,12 +9,14 @@ void yyerror(char *s);
 
 Liste *Tablesbl;
 FILE *F ;
+int profondeur = 0;
+int suiteCond = -1;
 int labels[MAX_SIZE];
 %}
 %union { int nb; char *var; }
 %token tFL tEQUAL tPO tPC tMINUS tADD tDIV tMUL tMAIN tFOR tBRAO tBRAC tRET 
 tSEMC tELSE tINT tCONST tCOL tERROR tCOMP tCOMPG tCOMPL tCOMA tPRINTF
-%token <nb> tNB tIF tWHILE
+%token <nb> tNB tIF tWHILE 
 %token <var> tID 
 %type <nb> Expr 
 %left tSEMC
@@ -31,6 +33,8 @@ Main 			: tMAIN tPO tPC {
 								Body
 								{ 
 									printf("Prog detecte\n");
+									delete(Tablesbl, profondeur);
+									afficherListe(Tablesbl);
 								}
 				;
 
@@ -43,12 +47,15 @@ Declarations  	: Decl Declarations
 
 Decl 			: tINT tID {
 								supression(Tablesbl);
-								insertion(Tablesbl, "int", indexGlobal,$2);
+								insertion(Tablesbl, "int", indexGlobal,$2, profondeur);
+								printf("inser profondeur: %d\n", profondeur);
+
  							} 
 							Suite 
 				| tCONST tID{
 								supression(Tablesbl);
-								insertion(Tablesbl, "const int", indexGlobal,$2);
+								insertion(Tablesbl, "const int", indexGlobal,$2, profondeur);
+								printf("inser profondeur: %d\n", profondeur);
 							}
 							Suite 
 				;
@@ -72,13 +79,15 @@ Suite 			: tSEMC
 				;
 
 SDecl 			: tID  {
-							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1);
+							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1, profondeur);
+							printf("inser profondeur: %d\n", profondeur);
 						}  
 						Suite
 
 				| tID tEQUAL 
 						{
-							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1);
+							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1, profondeur);
+							printf("inser profondeur: %d\n", profondeur);
 						}  
 						Expr  Suite
 				;
@@ -87,14 +96,14 @@ Ins  			: Aff Ins
 	 			| Condition Ins
 				| tPRINTF tPO tID tPC {;} Ins
 				| Boucle
-				| 
+				|
 				;
 
 Boucle			: tWHILE tPO {
+							
 							rewind(F);
 							int current = length_file(F);
 							$1 = current;
-							printf(" CURRENT %d\n\n",current);
 							}
 							Expr Operateur  Expr 
 							{
@@ -113,6 +122,7 @@ Boucle			: tWHILE tPO {
 								fprintf(F,"INF [@%d] [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 								}
 							fprintf(F,"JMPF \n");
+						 	profondeur++;	
 							}
 							tPC tBRAO Ins 
 							{
@@ -125,6 +135,8 @@ Boucle			: tWHILE tPO {
 								printf("FROM %d TO %d\n",i,labels[i]);
 							}
 							appliquerJump(F,labels);
+							supressionProfondeur(Tablesbl, profondeur);
+							profondeur--;
 							}
 							tBRAC
 							;
@@ -148,6 +160,7 @@ Condition 		: tIF tPO Expr Operateur Expr
 												int length = length_file(F);
 												fprintf(F,"JMPF \n");
 												$1 = length;
+												profondeur++;
 											}
 											tPC tBRAO Ins 
 											{
@@ -157,20 +170,26 @@ Condition 		: tIF tPO Expr Operateur Expr
 												patch($1+1,current+2);
 												fprintf(F,"JMP \n");
 												$1 = current;
+												suiteCond = current;
 											} 
-											tBRAC tELSE tBRAO Ins
-											{
-												rewind(F);
-												int current = length_file(F);
-												patch($1+1,current+1);
-												appliquerJump(F,labels);
-
-											}
-											 tBRAC
-											 
+											tBRAC SuiteCond 										 
 											;
 								
-   
+SuiteCond 		: tELSE tBRAO Ins
+					{
+					rewind(F);
+					int current = length_file(F);
+					patch(suiteCond +1,current+1);
+					appliquerJump(F,labels);
+					supressionProfondeur(Tablesbl, profondeur);
+					profondeur--;
+				}
+				tBRAC
+				| 
+				{
+					profondeur--;
+				}
+				;
 Operateur       : tCOMP	
 						{
 						condition = 1;
@@ -187,12 +206,12 @@ Operateur       : tCOMP
 
 Aff             : tID tEQUAL Expr tSEMC
 Expr 			: tID 	{	
-							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable");
+							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable", profondeur);
 							fprintf(F,"COP [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,$1));
 							$$ = indexGlobal-1;						
 					  	}
 				| tNB 	{
-							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable");
+							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable", profondeur);
 							fprintf(F,"AFF [@%d] %d\n",indexGlobal-1,$1);
 							$$ = indexGlobal-1;
 						}
