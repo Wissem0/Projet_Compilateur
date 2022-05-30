@@ -38,7 +38,7 @@ int length_file (FILE *F);
 
 void supressionProfondeur (Liste *liste , int profondeur);
 
-void delete(Liste *liste, int key) ;
+void deletePro(Liste *liste, int key) ;
 
 
 

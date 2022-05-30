@@ -226,16 +226,38 @@ void supressionProfondeur (Liste *liste , int profondeur){
 }
 }
 
-void delete(Liste *liste, int key)
+void deletePro(Liste *liste, int key)
 {
      
     // Store head node
     Element *temp = liste->premier;
     Element *prev = NULL;
+
+    while (temp != NULL && temp->profondeur == key)
+    {
+        liste->premier = temp->suivant; // Changed head
+        temp = liste->premier;
+        
+    }
+    
+
+    while (temp != NULL)
+    {
+        if (temp->profondeur == key)
+        {
+            
+            prev->suivant = temp->suivant;
+            temp = temp->suivant;
+        }else{
+            prev = temp;
+            temp = temp->suivant;
+        }
+    }
      
     // If head node itself holds
     // the key to be deleted
-    if (temp != NULL && temp->profondeur == key)
+
+    /*if (temp != NULL && temp->profondeur == key)
     {
         liste->premier = temp->suivant; // Changed head
         
@@ -243,23 +265,23 @@ void delete(Liste *liste, int key)
  
     // Else Search for the key to be deleted,
     // keep track of the previous node as we
-    // need to change 'prev->next' */
+    // need to change 'prev->next' 
     else
     {
-        while (temp != NULL && temp->profondeur != key)
+        while (temp != NULL)
         {
-            prev = temp;
-            temp = temp->suivant;
+            if (temp->profondeur == key)
+            {
+                liste->premier = temp->suivant; // Changed head
+                prev->suivant = temp->suivant;
+            }else{
+                prev = temp;
+                temp = temp->suivant;
+            }
         }
     
-        // If key was not present in linked list
-        if (temp == NULL)
-            return;
-    
-        // Unlink the node from linked list
-        prev->suivant = temp->suivant;
-    
 
-    }
+    }*/
+
 }
 

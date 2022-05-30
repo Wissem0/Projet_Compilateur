@@ -575,11 +575,11 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    27,    27,    27,    41,    44,    45,    48,    48,    55,
-      55,    62,    67,    68,    74,    73,    81,    81,    88,    87,
-      95,    96,    97,    97,    98,    99,   102,   109,   128,   102,
-     145,   166,   144,   179,   178,   189,   193,   197,   201,   207,
-     208,   213,   218,   225,   231
+       0,    27,    27,    27,    42,    45,    46,    49,    49,    56,
+      56,    63,    68,    69,    75,    74,    82,    82,    89,    88,
+      96,    97,    98,    98,    99,   100,   103,   110,   130,   103,
+     149,   171,   148,   187,   186,   199,   206,   210,   214,   220,
+     221,   226,   231,   238,   244
 };
 #endif
 
@@ -1442,97 +1442,98 @@ yyreduce:
 #line 34 "compilateur.y"
                                                                 { 
 									printf("Prog detecte\n");
-									delete(Tablesbl, profondeur);
+									printf("Profondeur fin : %d \n ", profondeur);
+									deletePro(Tablesbl, profondeur);
 									afficherListe(Tablesbl);
 								}
-#line 1449 "y.tab.c"
+#line 1450 "y.tab.c"
     break;
 
   case 7:
-#line 48 "compilateur.y"
+#line 49 "compilateur.y"
                                    {
 								supression(Tablesbl);
 								insertion(Tablesbl, "int", indexGlobal,(yyvsp[0].var), profondeur);
 								printf("inser profondeur: %d\n", profondeur);
 
  							}
-#line 1460 "y.tab.c"
+#line 1461 "y.tab.c"
     break;
 
   case 9:
-#line 55 "compilateur.y"
+#line 56 "compilateur.y"
                                             {
 								supression(Tablesbl);
 								insertion(Tablesbl, "const int", indexGlobal,(yyvsp[0].var), profondeur);
 								printf("inser profondeur: %d\n", profondeur);
 							}
-#line 1470 "y.tab.c"
+#line 1471 "y.tab.c"
     break;
 
   case 11:
-#line 63 "compilateur.y"
+#line 64 "compilateur.y"
                                 {
 					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 					supression(Tablesbl);
 				}
-#line 1479 "y.tab.c"
+#line 1480 "y.tab.c"
     break;
 
   case 13:
-#line 69 "compilateur.y"
+#line 70 "compilateur.y"
                                 {
 					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 					supression(Tablesbl);
 				}
-#line 1488 "y.tab.c"
+#line 1489 "y.tab.c"
     break;
 
   case 14:
-#line 74 "compilateur.y"
+#line 75 "compilateur.y"
                                 {
 					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 					supression(Tablesbl);
 				}
-#line 1497 "y.tab.c"
+#line 1498 "y.tab.c"
     break;
 
   case 16:
-#line 81 "compilateur.y"
+#line 82 "compilateur.y"
                                {
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,(yyvsp[0].var), profondeur);
 							printf("inser profondeur: %d\n", profondeur);
 						}
-#line 1506 "y.tab.c"
+#line 1507 "y.tab.c"
     break;
 
   case 18:
-#line 88 "compilateur.y"
+#line 89 "compilateur.y"
                                                 {
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,(yyvsp[-1].var), profondeur);
 							printf("inser profondeur: %d\n", profondeur);
 						}
-#line 1515 "y.tab.c"
+#line 1516 "y.tab.c"
     break;
 
   case 22:
-#line 97 "compilateur.y"
+#line 98 "compilateur.y"
                                                       {;}
-#line 1521 "y.tab.c"
+#line 1522 "y.tab.c"
     break;
 
   case 26:
-#line 102 "compilateur.y"
+#line 103 "compilateur.y"
                                      {
 							
 							rewind(F);
 							int current = length_file(F);
 							(yyvsp[-1].nb) = current;
 							}
-#line 1532 "y.tab.c"
+#line 1533 "y.tab.c"
     break;
 
   case 27:
-#line 109 "compilateur.y"
+#line 110 "compilateur.y"
                                                         {
 							
 							if (condition == 1)
@@ -1550,12 +1551,13 @@ yyreduce:
 								}
 							fprintf(F,"JMPF \n");
 						 	profondeur++;	
+							printf("++++++++++++incre profondeur\n");
 							}
-#line 1555 "y.tab.c"
+#line 1557 "y.tab.c"
     break;
 
   case 28:
-#line 128 "compilateur.y"
+#line 130 "compilateur.y"
                                                         {
 
 							fprintf(F,"JMP \n");	
@@ -1566,14 +1568,16 @@ yyreduce:
 								printf("FROM %d TO %d\n",i,labels[i]);
 							}
 							appliquerJump(F,labels);
-							supressionProfondeur(Tablesbl, profondeur);
+							//supressionProfondeur(Tablesbl, profondeur);
+							deletePro(Tablesbl, profondeur);
 							profondeur--;
+							printf("------------decre profondeur\n");
 							}
-#line 1573 "y.tab.c"
+#line 1577 "y.tab.c"
     break;
 
   case 30:
-#line 145 "compilateur.y"
+#line 149 "compilateur.y"
                                                                                         {
 												if (condition == 1)
 													{
@@ -1593,12 +1597,13 @@ yyreduce:
 												fprintf(F,"JMPF \n");
 												(yyvsp[-4].nb) = length;
 												profondeur++;
+												printf("++++++++++++incre profondeur\n");
 											}
-#line 1598 "y.tab.c"
+#line 1603 "y.tab.c"
     break;
 
   case 31:
-#line 166 "compilateur.y"
+#line 171 "compilateur.y"
                                                                                         {
 												
 												rewind(F);
@@ -1607,108 +1612,116 @@ yyreduce:
 												fprintf(F,"JMP \n");
 												(yyvsp[-8].nb) = current;
 												suiteCond = current;
+												
+												
+												
 											}
-#line 1612 "y.tab.c"
+#line 1620 "y.tab.c"
     break;
 
   case 33:
-#line 179 "compilateur.y"
+#line 187 "compilateur.y"
                                         {
 					rewind(F);
 					int current = length_file(F);
 					patch(suiteCond +1,current+1);
 					appliquerJump(F,labels);
-					supressionProfondeur(Tablesbl, profondeur);
+					//supressionProfondeur(Tablesbl, profondeur);
+					deletePro(Tablesbl, profondeur);
 					profondeur--;
+					printf("------------decre profondeur\n");
 				}
-#line 1625 "y.tab.c"
+#line 1635 "y.tab.c"
     break;
 
   case 35:
-#line 189 "compilateur.y"
+#line 199 "compilateur.y"
                                 {
+					deletePro(Tablesbl, profondeur);
 					profondeur--;
+					printf("------------decre profondeur\n");
+
 				}
-#line 1633 "y.tab.c"
+#line 1646 "y.tab.c"
     break;
 
   case 36:
-#line 194 "compilateur.y"
+#line 207 "compilateur.y"
                                                 {
 						condition = 1;
 						}
-#line 1641 "y.tab.c"
+#line 1654 "y.tab.c"
     break;
 
   case 37:
-#line 198 "compilateur.y"
+#line 211 "compilateur.y"
                                                 {
 						condition = 2;
 						}
-#line 1649 "y.tab.c"
+#line 1662 "y.tab.c"
     break;
 
   case 38:
-#line 202 "compilateur.y"
+#line 215 "compilateur.y"
                                                 {
 						condition = 3;
 						}
-#line 1657 "y.tab.c"
+#line 1670 "y.tab.c"
     break;
 
   case 40:
-#line 208 "compilateur.y"
+#line 221 "compilateur.y"
                                 {	
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable", profondeur);
 							fprintf(F,"COP [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,(yyvsp[0].var)));
 							(yyval.nb) = indexGlobal-1;						
 					  	}
-#line 1667 "y.tab.c"
+#line 1680 "y.tab.c"
     break;
 
   case 41:
-#line 213 "compilateur.y"
+#line 226 "compilateur.y"
                                         {
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable", profondeur);
 							fprintf(F,"AFF [@%d] %d\n",indexGlobal-1,(yyvsp[0].nb));
 							(yyval.nb) = indexGlobal-1;
 						}
-#line 1677 "y.tab.c"
+#line 1690 "y.tab.c"
     break;
 
   case 42:
-#line 219 "compilateur.y"
+#line 232 "compilateur.y"
                                                 {
 							fprintf(F,"ADD [@%d] [@%d] [@%d]\n",(yyvsp[-2].nb),(yyvsp[-2].nb),(yyvsp[0].nb) );
 							(yyval.nb) = (yyvsp[-2].nb);
 							supression(Tablesbl);
 			
 						}
-#line 1688 "y.tab.c"
+#line 1701 "y.tab.c"
     break;
 
   case 43:
-#line 226 "compilateur.y"
+#line 239 "compilateur.y"
                                                 {
 							fprintf(F,"SOU [@%d] [@%d] [@%d]\n",(yyvsp[-2].nb),(yyvsp[-2].nb),(yyvsp[0].nb) );
 							(yyval.nb) = (yyvsp[-2].nb);
 							supression(Tablesbl);	
 						}
-#line 1698 "y.tab.c"
+#line 1711 "y.tab.c"
     break;
 
   case 44:
-#line 232 "compilateur.y"
+#line 245 "compilateur.y"
                                                 {
 							fprintf(F,"MUL [@%d] [@%d] [@%d]\n",(yyvsp[-2].nb),(yyvsp[-2].nb),(yyvsp[0].nb) );
 							(yyval.nb) = (yyvsp[-2].nb);
 							supression(Tablesbl);	
 						}
-#line 1708 "y.tab.c"
+#line 1721 "y.tab.c"
     break;
 
 
-#line 1712 "y.tab.c"
+#line 1725 "y.tab.c"
 
       default: break;
     }
@@ -1940,7 +1953,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 237 "compilateur.y"
+#line 250 "compilateur.y"
 
 void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 

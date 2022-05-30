@@ -33,7 +33,8 @@ Main 			: tMAIN tPO tPC {
 								Body
 								{ 
 									printf("Prog detecte\n");
-									delete(Tablesbl, profondeur);
+									printf("Profondeur fin : %d \n ", profondeur);
+									deletePro(Tablesbl, profondeur);
 									afficherListe(Tablesbl);
 								}
 				;
@@ -123,6 +124,7 @@ Boucle			: tWHILE tPO {
 								}
 							fprintf(F,"JMPF \n");
 						 	profondeur++;	
+							printf("++++++++++++incre profondeur\n");
 							}
 							tPC tBRAO Ins 
 							{
@@ -135,8 +137,10 @@ Boucle			: tWHILE tPO {
 								printf("FROM %d TO %d\n",i,labels[i]);
 							}
 							appliquerJump(F,labels);
-							supressionProfondeur(Tablesbl, profondeur);
+							//supressionProfondeur(Tablesbl, profondeur);
+							deletePro(Tablesbl, profondeur);
 							profondeur--;
+							printf("------------decre profondeur\n");
 							}
 							tBRAC
 							;
@@ -161,6 +165,7 @@ Condition 		: tIF tPO Expr Operateur Expr
 												fprintf(F,"JMPF \n");
 												$1 = length;
 												profondeur++;
+												printf("++++++++++++incre profondeur\n");
 											}
 											tPC tBRAO Ins 
 											{
@@ -171,6 +176,9 @@ Condition 		: tIF tPO Expr Operateur Expr
 												fprintf(F,"JMP \n");
 												$1 = current;
 												suiteCond = current;
+												
+												
+												
 											} 
 											tBRAC SuiteCond 										 
 											;
@@ -181,13 +189,18 @@ SuiteCond 		: tELSE tBRAO Ins
 					int current = length_file(F);
 					patch(suiteCond +1,current+1);
 					appliquerJump(F,labels);
-					supressionProfondeur(Tablesbl, profondeur);
+					//supressionProfondeur(Tablesbl, profondeur);
+					deletePro(Tablesbl, profondeur);
 					profondeur--;
+					printf("------------decre profondeur\n");
 				}
 				tBRAC
 				| 
 				{
+					deletePro(Tablesbl, profondeur);
 					profondeur--;
+					printf("------------decre profondeur\n");
+
 				}
 				;
 Operateur       : tCOMP	
