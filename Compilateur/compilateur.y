@@ -11,6 +11,7 @@ Liste *Tablesbl;
 FILE *F ;
 int profondeur = 0;
 int suiteCond = -1;
+int patching = -1;
 int labels[MAX_SIZE];
 %}
 %union { int nb; char *var; }
@@ -24,42 +25,32 @@ tSEMC tELSE tINT tCONST tCOL tERROR tCOMP tCOMPG tCOMPL tCOMA tPRINTF
 
 
 %%
+Prog 			:  Main Functions;
+Functions 		: Fun Functions
+				| 
+				;
+Fun				: tINT tID tPO Param tPC tBRAO Ins tBRAC 
+
+Param			: tINT tID SuiteParam;
+
+SuiteParam		: tCOMA Param
+				| 
+				;	
+
 Main 			: tMAIN tPO tPC { 
-									printf("Main detecte\n"); 
 									Tablesbl = initialisation(); 
 									F = fopen("assembleur","w+");
 									indexGlobal = 0;
 								}
 								Body
 								{ 
-									printf("Prog detecte\n");
-									printf("Profondeur fin : %d \n ", profondeur);
 									deletePro(Tablesbl, profondeur);
-									afficherListe(Tablesbl);
 								}
 				;
 
-Body 			: tBRAO Declarations Ins tBRAC 
+Body 			: tBRAO  Ins tBRAC 
 				;
 
-Declarations  	: Decl Declarations
-				|
-				;
-
-Decl 			: tINT tID {
-								supression(Tablesbl);
-								insertion(Tablesbl, "int", indexGlobal,$2, profondeur);
-								printf("inser profondeur: %d\n", profondeur);
-
- 							} 
-							Suite 
-				| tCONST tID{
-								supression(Tablesbl);
-								insertion(Tablesbl, "const int", indexGlobal,$2, profondeur);
-								printf("inser profondeur: %d\n", profondeur);
-							}
-							Suite 
-				;
 Suite 			: tSEMC
 				{
 					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
@@ -81,27 +72,44 @@ Suite 			: tSEMC
 
 SDecl 			: tID  {
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1, profondeur);
-							printf("inser profondeur: %d\n", profondeur);
 						}  
 						Suite
 
 				| tID tEQUAL 
 						{
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1, profondeur);
-							printf("inser profondeur: %d\n", profondeur);
 						}  
 						Expr  Suite
 				;
 
 Ins  			: Aff Ins
 	 			| Condition Ins
-				| tPRINTF tPO tID tPC {;} Ins
-				| Boucle
+				| tPRINTF tPO tID tPC tSEMC
+											{
+											fprintf(F,"PRI [@%d]\n",adresse(Tablesbl,$3));		
+											} 
+				Ins
+				| Boucle Ins
+				| Declarations Ins
 				|
 				;
 
+Declarations  	: Decl Declarations
+				|
+				;
+
+Decl 			: tINT tID 		
+								{
+								insertion(Tablesbl, "int", indexGlobal,$2, profondeur);
+ 								} 
+				Suite 
+				| tCONST tID
+							{
+								insertion(Tablesbl, "const int", indexGlobal,$2, profondeur);
+							}
+							Suite 
+				;
 Boucle			: tWHILE tPO {
-							
 							rewind(F);
 							int current = length_file(F);
 							$1 = current;
@@ -111,7 +119,6 @@ Boucle			: tWHILE tPO {
 							
 							if (condition == 1)
 								{
-								afficherListe(Tablesbl);
 								fprintf(F,"EQU [@%d] [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
 								}
 							if (condition == 2)
@@ -124,23 +131,19 @@ Boucle			: tWHILE tPO {
 								}
 							fprintf(F,"JMPF \n");
 						 	profondeur++;	
-							printf("++++++++++++incre profondeur\n");
+							supression(Tablesbl);
+							supression(Tablesbl);	
 							}
-							tPC tBRAO Ins 
+							tPC tBRAO  Ins 
 							{
 
 							fprintf(F,"JMP \n");	
 							int current = length_file(F);
 							patch(current, $1 + 1);
 							patch($1 + 4,current+1);
-							for( int i = 0; i < 30; i++){
-								printf("FROM %d TO %d\n",i,labels[i]);
-							}
 							appliquerJump(F,labels);
-							//supressionProfondeur(Tablesbl, profondeur);
 							deletePro(Tablesbl, profondeur);
 							profondeur--;
-							printf("------------decre profondeur\n");
 							}
 							tBRAC
 							;
@@ -165,42 +168,42 @@ Condition 		: tIF tPO Expr Operateur Expr
 												fprintf(F,"JMPF \n");
 												$1 = length;
 												profondeur++;
-												printf("++++++++++++incre profondeur\n");
+												supression(Tablesbl);
+												supression(Tablesbl);
+
 											}
 											tPC tBRAO Ins 
 											{
 												
 												rewind(F);
 												int current = length_file(F);
-												patch($1+1,current+2);
-												fprintf(F,"JMP \n");
+												patching = $1;
+												patch($1+1,current+1);
 												$1 = current;
 												suiteCond = current;
-												
-												
-												
+	
 											} 
 											tBRAC SuiteCond 										 
 											;
 								
-SuiteCond 		: tELSE tBRAO Ins
+SuiteCond 		: tELSE {
+						patch(patching + 1,suiteCond+2);
+						fprintf(F,"JMP \n");
+						}tBRAO Ins
 					{
 					rewind(F);
 					int current = length_file(F);
 					patch(suiteCond +1,current+1);
 					appliquerJump(F,labels);
-					//supressionProfondeur(Tablesbl, profondeur);
 					deletePro(Tablesbl, profondeur);
 					profondeur--;
-					printf("------------decre profondeur\n");
 				}
 				tBRAC
 				| 
 				{
+					appliquerJump(F,labels);
 					deletePro(Tablesbl, profondeur);
 					profondeur--;
-					printf("------------decre profondeur\n");
-
 				}
 				;
 Operateur       : tCOMP	
@@ -218,6 +221,11 @@ Operateur       : tCOMP
 				;
 
 Aff             : tID tEQUAL Expr tSEMC
+				{
+
+					fprintf(F,"COP [@%d] [@%d]\n",adresse(Tablesbl,$1), $3);
+					supression(Tablesbl);
+				}
 Expr 			: tID 	{	
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable", profondeur);
 							fprintf(F,"COP [@%d] [@%d]\n",Tablesbl->premier->adresse, adresse(Tablesbl,$1));
