@@ -78,8 +78,8 @@ C => Test_C
 
 
 -- Stimulus process
-Test_A <= "10000011" ;
-Test_B <=  "10001010" , "10000011" after 20ns ;
-Test_Ctrl_Alu <= "000", "001" after 20 ns;
+Test_A <= "00010101";
+Test_B <=  "00010101";
+Test_Ctrl_Alu <= "010";
 
 end Behavioral;

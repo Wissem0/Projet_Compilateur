@@ -45,10 +45,10 @@ end ALU;
 
 architecture Behavioral of ALU is
 
-signal Aux : STD_LOGIC_VECTOR (7 downto 0);
+signal Aux : STD_LOGIC_VECTOR (7 downto 0)  := "00000000";
 signal tmp: std_logic_vector (8 downto 0);
-begin 
 
+begin 
 --if (Aux = "00000000") then Z <= '1';
 --else Z <= '0';
 --end if;
@@ -61,9 +61,7 @@ case Ctrl_Alu is
 when "000" => Aux <= A + B;
 when "001" => Aux <= A - B;
 when "010" => Aux <=  std_logic_vector(to_unsigned((to_integer(unsigned(A)) * to_integer(unsigned(B))),8)) ;
-when "011" => Aux <= A OR B ;
-when "100" => Aux <= A AND B;
-when "101" => Aux <= A;
+when "011" => Aux(6 downto 0) <= A (7 downto 1);
 when others => Aux <= "00000000";
 end case;
 

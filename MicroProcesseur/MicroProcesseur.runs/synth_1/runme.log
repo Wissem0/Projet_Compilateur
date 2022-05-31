@@ -14,142 +14,142 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26062 
+INFO: Helper process launched with PID 6729 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.277 ; gain = 83.828 ; free physical = 7352 ; free virtual = 19669
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.273 ; gain = 83.828 ; free physical = 11338 ; free virtual = 22537
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MicroProcesseur' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:40]
-INFO: [Synth 8-3491] module 'Memoire_instruction' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:37' bound to instance 'Memoire_instruction_a' of component 'Memoire_instruction' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:183]
-INFO: [Synth 8-638] synthesizing module 'Memoire_instruction' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:43]
-WARNING: [Synth 8-3848] Net tab[255] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[254] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[253] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[252] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[251] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[250] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[249] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[248] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[247] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[246] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[245] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[244] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[243] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[242] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[241] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[240] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[239] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[238] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[237] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[236] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[235] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[234] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[233] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[232] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[231] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[230] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[229] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[228] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[227] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[226] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[225] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[224] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[223] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[222] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[221] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[220] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[219] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[218] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[217] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[216] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[215] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[214] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[213] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[212] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[211] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[210] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[209] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[208] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[207] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[206] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[205] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[204] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[203] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[202] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[201] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[200] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[199] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[198] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[197] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[196] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[195] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[194] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[193] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[192] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[191] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[190] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[189] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[188] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[187] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[186] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[185] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[184] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[183] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[182] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[181] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[180] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[179] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[178] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[177] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[176] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[175] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[174] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[173] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[172] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[171] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[170] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[169] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[168] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[167] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[166] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[165] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[164] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[163] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[162] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[161] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[160] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[159] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[158] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[157] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
-WARNING: [Synth 8-3848] Net tab[156] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'MicroProcesseur' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:40]
+INFO: [Synth 8-3491] module 'Memoire_instruction' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:37' bound to instance 'Memoire_instruction_a' of component 'Memoire_instruction' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'Memoire_instruction' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:43]
+WARNING: [Synth 8-3848] Net tab[255] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[254] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[253] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[252] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[251] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[250] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[249] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[248] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[247] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[246] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[245] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[244] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[243] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[242] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[241] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[240] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[239] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[238] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[237] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[236] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[235] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[234] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[233] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[232] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[231] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[230] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[229] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[228] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[227] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[226] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[225] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[224] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[223] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[222] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[221] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[220] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[219] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[218] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[217] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[216] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[215] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[214] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[213] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[212] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[211] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[210] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[209] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[208] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[207] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[206] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[205] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[204] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[203] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[202] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[201] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[200] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[199] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[198] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[197] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[196] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[195] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[194] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[193] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[192] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[191] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[190] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[189] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[188] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[187] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[186] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[185] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[184] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[183] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[182] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[181] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[180] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[179] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[178] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[177] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[176] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[175] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[174] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[173] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[172] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[171] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[170] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[169] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[168] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[167] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[166] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[165] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[164] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[163] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[162] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[161] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[160] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[159] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[158] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[157] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
+WARNING: [Synth 8-3848] Net tab[156] in module/entity Memoire_instruction does not have driver. [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:45]
 INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'Memoire_instruction' (1#1) [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:43]
-INFO: [Synth 8-3491] module 'LI_DI' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:34' bound to instance 'LI_DI_a' of component 'LI_DI' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:192]
-INFO: [Synth 8-638] synthesizing module 'LI_DI' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'LI_DI' (2#1) [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:46]
-INFO: [Synth 8-3491] module 'LI_DI' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:34' bound to instance 'DI_EX_a' of component 'LI_DI' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:212]
-INFO: [Synth 8-3491] module 'ALU' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:35' bound to instance 'ALU_a' of component 'ALU' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:233]
-INFO: [Synth 8-638] synthesizing module 'ALU' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:46]
-INFO: [Synth 8-3491] module 'EX_Mem' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:34' bound to instance 'EX_Mem_a' of component 'EX_Mem' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:257]
-INFO: [Synth 8-638] synthesizing module 'EX_Mem' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'EX_Mem' (4#1) [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:46]
-INFO: [Synth 8-3491] module 'EX_Mem' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:34' bound to instance 'Mem_Re_a' of component 'EX_Mem' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:269]
-INFO: [Synth 8-3491] module 'Bench_Register' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd:36' bound to instance 'Bench_Register_a' of component 'Bench_Register' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:287]
-INFO: [Synth 8-638] synthesizing module 'Bench_Register' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'Bench_Register' (5#1) [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd:49]
-INFO: [Synth 8-3491] module 'Memoire_donnee' declared at '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:36' bound to instance 'Memoire_donnee_a' of component 'Memoire_donnee' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:304]
-INFO: [Synth 8-638] synthesizing module 'Memoire_donnee' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'Memoire_donnee' (6#1) [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'MicroProcesseur' (7#1) [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Memoire_instruction' (1#1) [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd:43]
+INFO: [Synth 8-3491] module 'LI_DI' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:34' bound to instance 'LI_DI_a' of component 'LI_DI' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'LI_DI' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'LI_DI' (2#1) [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:46]
+INFO: [Synth 8-3491] module 'LI_DI' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd:34' bound to instance 'DI_EX_a' of component 'LI_DI' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:213]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:35' bound to instance 'ALU_a' of component 'ALU' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:234]
+INFO: [Synth 8-638] synthesizing module 'ALU' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:46]
+INFO: [Synth 8-3491] module 'EX_Mem' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:34' bound to instance 'EX_Mem_a' of component 'EX_Mem' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'EX_Mem' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'EX_Mem' (4#1) [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:46]
+INFO: [Synth 8-3491] module 'EX_Mem' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd:34' bound to instance 'Mem_Re_a' of component 'EX_Mem' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:260]
+INFO: [Synth 8-3491] module 'Bench_Register' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd:36' bound to instance 'Bench_Register_a' of component 'Bench_Register' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:279]
+INFO: [Synth 8-638] synthesizing module 'Bench_Register' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'Bench_Register' (5#1) [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd:49]
+INFO: [Synth 8-3491] module 'Memoire_donnee' declared at '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:36' bound to instance 'Memoire_donnee_a' of component 'Memoire_donnee' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'Memoire_donnee' [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Memoire_donnee' (6#1) [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'MicroProcesseur' (7#1) [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:40]
 WARNING: [Synth 8-3331] design EX_Mem has unconnected port Clock
 WARNING: [Synth 8-3331] design ALU has unconnected port N
 WARNING: [Synth 8-3331] design ALU has unconnected port O
 WARNING: [Synth 8-3331] design LI_DI has unconnected port Clock
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1310.902 ; gain = 139.453 ; free physical = 7351 ; free virtual = 19669
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1310.898 ; gain = 139.453 ; free physical = 11335 ; free virtual = 22536
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1310.902 ; gain = 139.453 ; free physical = 7354 ; free virtual = 19671
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1310.898 ; gain = 139.453 ; free physical = 11336 ; free virtual = 22537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -157,9 +157,9 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1318.906 ; gain = 147.457 ; free physical = 7353 ; free virtual = 19671
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1318.902 ; gain = 147.457 ; free physical = 11335 ; free virtual = 22536
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd:60]
 INFO: [Synth 8-5544] ROM "tab_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tab_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tab_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -277,8 +277,10 @@ INFO: [Synth 8-5546] ROM "tab_reg[158]" won't be mapped to RAM because it is too
 INFO: [Synth 8-5546] ROM "tab_reg[157]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "tab_reg[156]" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "LC_ALU" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LC_Mem_des_donnees" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1338.945 ; gain = 167.496 ; free physical = 7285 ; free virtual = 19604
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1337.934 ; gain = 166.488 ; free physical = 11258 ; free virtual = 22475
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -299,9 +301,10 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 275   
 +---Muxes : 
 	   7 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 274   
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -312,9 +315,10 @@ Hierarchical RTL Component report
 Module MicroProcesseur 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
 Module Memoire_instruction 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -387,38 +391,6 @@ WARNING: [Synth 8-3332] Sequential element (Sortie_reg[3]) is unused and will be
 WARNING: [Synth 8-3332] Sequential element (Sortie_reg[2]) is unused and will be removed from module Memoire_instruction.
 WARNING: [Synth 8-3332] Sequential element (Sortie_reg[1]) is unused and will be removed from module Memoire_instruction.
 WARNING: [Synth 8-3332] Sequential element (Sortie_reg[0]) is unused and will be removed from module Memoire_instruction.
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][7]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[7] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][7]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[7] with 2nd driver pin 'GND' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[7] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][6]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[6] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][6]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[6] with 2nd driver pin 'GND' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[6] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][5]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[5] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][5]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[5] with 2nd driver pin 'GND' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[5] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][4]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[4] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][4]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[4] with 2nd driver pin 'VCC' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[4] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][3]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[3] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][3]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[3] with 2nd driver pin 'GND' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[3] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][2]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[2] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][2]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[2] with 2nd driver pin 'VCC' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[2] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][1]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[1] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][1]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[1] with 2nd driver pin 'GND' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[1] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[1][0]) is unused and will be removed from module MicroProcesseur.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[0] with 1st driver pin 'Memoire_donnee_a/tab_reg[1][0]/Q' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net data254[0] with 2nd driver pin 'VCC' [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net data254[0] is connected to constant driver, other driver is ignored [/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd:49]
 WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[255][7]) is unused and will be removed from module MicroProcesseur.
 WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[255][6]) is unused and will be removed from module MicroProcesseur.
 WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[255][5]) is unused and will be removed from module MicroProcesseur.
@@ -479,9 +451,17 @@ WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][7]) is
 WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][6]) is unused and will be removed from module MicroProcesseur.
 WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][5]) is unused and will be removed from module MicroProcesseur.
 WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][4]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][3]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][2]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][1]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[248][0]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[247][7]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[247][6]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[247][5]) is unused and will be removed from module MicroProcesseur.
+WARNING: [Synth 8-3332] Sequential element (Memoire_donnee_a/tab_reg[247][4]) is unused and will be removed from module MicroProcesseur.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7186 ; free virtual = 19509
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11151 ; free virtual = 22376
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -494,7 +474,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -506,7 +486,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -530,7 +510,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -543,7 +523,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -555,25 +535,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -598,11 +578,11 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 24 critical warnings and 2493 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.031 ; gain = 265.582 ; free physical = 7187 ; free virtual = 19510
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.039 ; gain = 265.582 ; free physical = 7196 ; free virtual = 19520
+Synthesis finished with 0 errors, 0 critical warnings and 2489 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.020 ; gain = 265.574 ; free physical = 11152 ; free virtual = 22377
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1437.027 ; gain = 265.574 ; free physical = 11161 ; free virtual = 22386
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -610,11 +590,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-149 Infos, 204 Warnings, 24 Critical Warnings and 0 Errors encountered.
+151 Infos, 204 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1508.055 ; gain = 348.230 ; free physical = 7170 ; free virtual = 19493
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1507.043 ; gain = 347.223 ; free physical = 11118 ; free virtual = 22357
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint '/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.runs/synth_1/MicroProcesseur.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.runs/synth_1/MicroProcesseur.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MicroProcesseur_utilization_synth.rpt -pb MicroProcesseur_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1532.066 ; gain = 0.000 ; free physical = 7170 ; free virtual = 19493
-INFO: [Common 17-206] Exiting Vivado at Thu May 26 13:23:48 2022...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1531.055 ; gain = 0.000 ; free physical = 11119 ; free virtual = 22358
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 09:55:58 2022...

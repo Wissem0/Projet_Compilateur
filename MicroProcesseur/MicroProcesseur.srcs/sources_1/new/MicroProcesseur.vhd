@@ -241,7 +241,7 @@ S => Sortie_S_ALU
 
 
 --Multiplixeur de l'UAL
-Sortie_MUX_UAL_banc_register <= Sortie_B_DI_EX when to_integer(unsigned(Sortie_op_LI_DI)) = 6 or to_integer(unsigned(Sortie_op_LI_DI)) = 5 or to_integer(unsigned(Sortie_op_LI_DI)) = 7 or to_integer(unsigned(Sortie_op_LI_DI)) = 8 else
+Sortie_MUX_UAL_banc_register <= Sortie_B_DI_EX when to_integer(unsigned(Sortie_op_DI_EX)) = 6 or to_integer(unsigned(Sortie_op_DI_EX)) = 5 or to_integer(unsigned(Sortie_op_DI_EX)) = 7 or to_integer(unsigned(Sortie_op_DI_EX)) = 8 else
      Sortie_S_ALU;
 
 --lien entre DI_EX et EX/MEM
@@ -273,6 +273,8 @@ Sortie_B => Sortie_B_Mem_Re
 LC_Fin <= '1' when to_integer(unsigned(Sortie_op_Mem_Re)) = 6 else
       '1' when to_integer(unsigned(Sortie_op_Mem_Re)) = 5 else
       '1' when to_integer(unsigned(Sortie_op_Mem_Re)) = 1 else
+      '1' when to_integer(unsigned(Sortie_op_Mem_Re)) = 2 else
+      '1' when to_integer(unsigned(Sortie_op_Mem_Re)) = 3 else
       '1' when to_integer(unsigned(Sortie_op_Mem_Re)) = 7 else
       '0';
 

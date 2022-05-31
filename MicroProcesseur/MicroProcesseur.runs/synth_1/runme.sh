@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/sedira/Insa-prog/projet_sys/ArchiMat/MicroProcesseur/MicroProcesseur.runs/synth_1'
+HD_PWD='/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -65,7 +65,7 @@ end process;
 -- Stimulus process
 
 
-Test_Adresse <= "00000000",  "00000001" after 200ns, "00000010" after 400ns, "00000011" after 600ns, "00000100" after 800ns;
+Test_Adresse <= "00000000" ,"00000001" after 100ns, "00000010" after 200ns, "00000011" after 300ns, "00000100" after 400ns,  "00000101" after 500ns,  "00000110" after 600ns;
 
 
 

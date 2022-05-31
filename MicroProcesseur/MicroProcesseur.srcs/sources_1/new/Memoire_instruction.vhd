@@ -45,11 +45,13 @@ type Reg_Vec  is array(255 downto 0) of std_logic_vector(31 downto 0);
 signal tab  :   Reg_Vec;
 
 begin
-tab(0) <= x"060F1500";
+tab(0) <= x"060F0F00";
 tab(1) <= x"05100000";
 tab(2) <= x"01200F1F";
-tab(3) <= x"08012000";
-tab(4) <= x"07400100";
+tab(3) <= x"02300F1F";
+tab(4) <= x"03400F1F";
+tab(5) <= x"08012000";
+tab(6) <= x"07800100";
 process
 begin
 

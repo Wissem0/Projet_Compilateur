@@ -47,11 +47,13 @@ architecture Behavioral of LI_DI is
 
 begin
 
- 
+process (Clock)
+begin
+
       Sortie_op <= OP_entre;
       Sortie_A <= A_entree;
       Sortie_B <= B_entree;
       Sortie_C <= C_entree;
-      
+end process;      
 
 end Behavioral;
