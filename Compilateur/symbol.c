@@ -28,7 +28,6 @@ Liste *initialisation()
 int unique(Liste *liste, char * nom)
 {
 
-printf("erreur111111111111111111111");
 if (liste->premier == NULL)
 {
     return 1;
@@ -56,15 +55,7 @@ else{
 
 void insertion(Liste *liste, char *type, int adresse, char *nom, int profondeur)
 {
-
-       /* printf("erreur");
-        if (unique(liste,nom) == 0)
-        {
-            printf("ERREUR the variable ID is not unique");
-            EXIT_FAILURE;
-        }*/
-            
-            
+      
             Element *nouveau = malloc(sizeof(*nouveau));
             if (liste != NULL && liste->premier == NULL)
             {    
@@ -102,8 +93,6 @@ void insertion(Liste *liste, char *type, int adresse, char *nom, int profondeur)
             indexGlobal++;
             longueur++;
             }
-        // printf("RAJOUT DE %s\n",nom);
-        // printf("INDEX %d\n",indexGlobal);
         
 }
 
@@ -176,8 +165,6 @@ void supression (Liste *liste){
     longueur--;
     }
 
-    // printf("SUPRESSION DE TETE \n");
-    // printf("INDEX %d\n",indexGlobal);
 }
 
 int length_file (FILE * F)
@@ -221,8 +208,7 @@ void supressionProfondeur (Liste *liste , int profondeur){
             }
         
         }
-    // printf("SUPRESSION DE TETE \n");
-    // printf("INDEX %d\n",indexGlobal);
+
 }
 }
 
@@ -254,34 +240,5 @@ void deletePro(Liste *liste, int key)
         }
     }
      
-    // If head node itself holds
-    // the key to be deleted
-
-    /*if (temp != NULL && temp->profondeur == key)
-    {
-        liste->premier = temp->suivant; // Changed head
-        
-    }
- 
-    // Else Search for the key to be deleted,
-    // keep track of the previous node as we
-    // need to change 'prev->next' 
-    else
-    {
-        while (temp != NULL)
-        {
-            if (temp->profondeur == key)
-            {
-                liste->premier = temp->suivant; // Changed head
-                prev->suivant = temp->suivant;
-            }else{
-                prev = temp;
-                temp = temp->suivant;
-            }
-        }
-    
-
-    }*/
-
 }
 

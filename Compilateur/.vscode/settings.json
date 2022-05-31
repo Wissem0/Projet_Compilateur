@@ -4,6 +4,7 @@
         "random": "cpp",
         "array": "c",
         "string": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "thread": "c"
     }
 }

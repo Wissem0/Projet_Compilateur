@@ -106,7 +106,6 @@ void appliquerJump(FILE *F,int labels[]){
     {
         if (labels[index] != 0)
             {
-            printf("JMB ?%s\n" , actuel->chaine);
             fprintf(F,"%s %d %d\n",actuel->chaine,index,labels[index]);
             labels[index] = 0;
             }

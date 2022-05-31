@@ -5,7 +5,7 @@ BIN=compilateur
 CC=gcc
 CFLAGS=-Wall -g
 
-OBJ=y.tab.o lex.yy.o symbol.o util.o main.o
+OBJ=y.tab.o lex.yy.o symbol.o util.o function.o main.o
 
 all: $(BIN)
 
@@ -14,6 +14,9 @@ symbol.o:
 
 util.o: 
 	gcc -c util.c
+
+function.o: 
+	gcc -c function.c
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
