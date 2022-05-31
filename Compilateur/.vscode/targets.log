@@ -1,0 +1,429 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon May 30 21:14:46 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = mate
+# environment
+OPAM_SWITCH_PREFIX = /mnt/commetud/GEI/OCaml/.opam/4.08.1
+# default
+.SHELLFLAGS := -c
+# environment
+OCAML_TOPLEVEL_PATH = /mnt/commetud/GEI/OCaml/.opam/4.08.1/lib/toplevel
+# makefile (from 'Makefile', line 8)
+OBJ = y.tab.o lex.yy.o symbol.o util.o main.o
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/ferchich/.Xauthority
+# environment
+GDMSESSION = mate
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/ferchich/Bureau/Projet_Système/Projet_Compilateur/Compilateur
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 3)
+BIN = compilateur
+# environment
+GDM_LANG = fr_FR
+# environment
+ 
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"25fe6a3290ec415596628d4afc87a88c.fr","_translationsConfigFile":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/tcf.json","_cacheRoot":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr","_resolvedLanguagePackCoreLocation":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# makefile (from 'Makefile', line 6)
+CFLAGS = -Wall -g
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-mate:/etc/xdg
+# environment
+GTK_OVERLAY_SCROLLING = 0
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+XDG_DATA_DIRS = /usr/share/mate:/usr/share/mate:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/32266/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+QT_SCALE_FACTOR = 1
+# environment
+CLUTTER_IM_MODULE = ibus
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/32266/vscode-ipc-2f309f85-3b6a-4dd4-91db-6c19b8cfeefe.sock
+# environment
+VSCODE_CWD = /home/ferchich/Bureau/Projet_Système/Projet_Compilateur/Compilateur
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_32266_LStNK5
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /mnt/commetud/GEI/OCaml/.opam/4.08.1/bin:/usr/local/insa/shared/opam/default/bin:/usr/local/insa/lustre-v4-XX-0-linux64/bin:/usr/local/insa/arm-ada/compilateur/gcc-arm-none-eabi/bin:/usr/local/insa/anaconda/bin:/usr/local/insa/bin:/usr/local/insa/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/insa/tina/bin:/snap/bin
+# makefile (from 'Makefile', line 1)
+GRM = compilateur.y
+# environment
+GPG_AGENT_INFO = /run/user/32266/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/insa-11268:@/tmp/.ICE-unix/3100,unix/insa-11268:/tmp/.ICE-unix/3100
+# environment
+XDG_RUNTIME_DIR = /run/user/32266
+# environment
+WINDOWID = 50331654
+# environment
+UBUNTU_MENUPROXY = 1
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/ferchich
+# environment
+XDG_SESSION_DESKTOP = mate
+# environment
+SSH_AUTH_SOCK = /run/user/32266/keyring/ssh
+# environment
+R_LIBS_USER = ~/R/libs
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+GTK_IM_MODULE = ibus
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/ferchich/Bureau/Projet_Système/Projet_Compilateur/Compilateur
+# environment
+QT_QPA_PLATFORMTHEME = gtk2
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 3175
+# environment
+PKG_CONFIG_PATH = /usr/local/insa/shared/opam/default/lib/pkgconfig:
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = MATE
+# environment
+GTK_MODULES = appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module
+# environment
+MANPATH = /usr/local/man:/usr/local/share/man:/usr/share/man:/opt/man:/usr/X11R6/man:$LUSTRE_INSTALL/man:/usr/local/insa/shared/opam/default/man:/mnt/commetud/GEI/OCaml/.opam/4.08.1/man
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/ferchich
+# environment
+LD_LIBRARY_PATH = /usr/local/insa/lib:$LD_LIBRARY_PATH
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/ferchich/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = ferchich
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+MAKE_VERSION := 4.2.1
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 7
+# environment
+MAKELEVEL := 0
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 5)
+CC = gcc
+# environment
+COMPIZ_CONFIG_PROFILE = mate
+# environment
+XDG_SESSION_ID = c3
+# environment
+USER = ferchich
+# environment
+CAML_LD_LIBRARY_PATH = /mnt/commetud/GEI/OCaml/.opam/4.08.1/lib/stublibs:/mnt/commetud/GEI/OCaml/.opam/4.08.1/lib/ocaml/stublibs:/mnt/commetud/GEI/OCaml/.opam/4.08.1/lib/ocaml
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = MATE
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /home/ferchich/Bureau/Projet_Système/Projet_Compilateur
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = fr_FR
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/32266/vscode-e54f32a6-1.67.2-main.sock
+# makefile (from 'Makefile', line 2)
+LEX = compilateur.l
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+GRC_XTERM_EXECUTABLE = /usr/bin/xterm
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# automatic
++F = $(notdir $+)
+# environment
+QT_ACCESSIBILITY = 1
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+GRC_BLOCKS_PATH = /usr/local/share/gnuradio/grc/blocks:/usr/share/gnuradio/grc/blocks:/usr/local/insa/share/gnuradio/grc/blocks
+# environment
+LC_ALL = C
+# environment
+LUSTRE_INSTALL = /usr/local/insa/lustre-v4-XX-0-linux64
+# environment
+QT4_IM_MODULE = ibus
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+MATE_DESKTOP_SESSION_ID = this-is-deprecated
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 21252
+# variable set hash-table stats:
+# Load=123/1024=12%, Rehash=0, Collisions=14/156=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 76, inode 2859633612): 23 files, no impossibilities.
+
+# 23 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.c
+#  recipe to execute (from 'Makefile', line 19):
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+symbol.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 13):
+	gcc -c symbol.c
+
+all: compilateur
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+# Not a target:
+compilateur.l:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+compilateur: y.tab.o lex.yy.o symbol.o util.o main.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-30 20:18:17.210257
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+#  recipe to execute (from 'Makefile', line 28):
+	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@
+
+# Not a target:
+compilateur.y:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-30 21:14:46.707842
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lex.yy.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-30 17:46:14.51664
+#  File has been updated.
+#  Successfully updated.
+
+y.tab.o: y.tab.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'y.tab'
+#  Last modified 2022-05-30 20:18:17.041257
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+#  recipe to execute (from 'Makefile', line 19):
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+lex.yy.c: compilateur.l
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	flex $<
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 31):
+	rm $(OBJ) y.tab.c y.tab.h lex.yy.c compilateur
+
+y.tab.c: compilateur.y
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  Last modified 2022-05-30 20:18:16.997255
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := y.tab.c
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := compilateur.y
+# automatic
+# | := 
+# automatic
+# < := compilateur.y
+# automatic
+# ^ := compilateur.y
+# automatic
+# ? := compilateur.y
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+#  recipe to execute (from 'Makefile', line 22):
+	yacc -d $<
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+util.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 16):
+	gcc -c util.c
+
+# files hash-table stats:
+# Load=15/1024=1%, Rehash=0, Collisions=0/39=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 32 / storage = 268 B / avg = 8 B
+# current buf: size = 8162 B / used = 268 B / count = 32 / avg = 8 B
+
+# strcache performance: lookups = 60 / hit rate = 46%
+# hash-table stats:
+# Load=32/8192=0%, Rehash=0, Collisions=1/60=2%
+# Finished Make data base on Mon May 30 21:14:46 2022
+
+ 

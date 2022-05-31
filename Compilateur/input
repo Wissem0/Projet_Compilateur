@@ -1,10 +1,14 @@
 main() {
-    
-    int a = 0 ;
+  int s = 0 ;
+  int a = a + 4;
+  if (a > 3) {
+    int c = 12;
+    while (c < 0) {
+      printf(a);
+      int d = 200;
+      d = 1 + a;
+      int e = 20;
 
-
-    while ( a < 0){
-
-        a = a + 1;
     }
+  }
 }
