@@ -28,25 +28,26 @@ Liste *initialisation()
 int unique(Liste *liste, char * nom)
 {
 
-if (liste->premier == NULL)
+if (liste->premier == NULL || liste == NULL || liste->premier->type == NULL)
 {
+
     return 1;
 }
 else{
-
     Element *nouveau;
     nouveau = liste->premier;
+
     if (strcmp(nouveau->nom,nom) == 0)
         {
            return 0;
         }
-    while ( nouveau->suivant != NULL)
+    while ( nouveau != NULL)
     {
         if (strcmp(nouveau->nom,nom) == 0)
         {
             return 0;
         }
-
+    nouveau = nouveau->suivant;
     }
 
     return 1;
@@ -55,7 +56,12 @@ else{
 
 void insertion(Liste *liste, char *type, int adresse, char *nom, int profondeur)
 {
-      
+            if (unique(liste, nom) == 0 && strcmp(nom, "Temp_Variable")!= 0)
+            {
+                printf("WARNING Variable %s déja utilisée\n",nom);
+                exit(EXIT_FAILURE);
+            }
+            else{
             Element *nouveau = malloc(sizeof(*nouveau));
             if (liste != NULL && liste->premier == NULL)
             {    
@@ -93,6 +99,8 @@ void insertion(Liste *liste, char *type, int adresse, char *nom, int profondeur)
             indexGlobal++;
             longueur++;
             }
+            }
+            
         
 }
 

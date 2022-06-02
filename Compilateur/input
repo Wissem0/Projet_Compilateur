@@ -12,6 +12,9 @@ main() {
   int a = 0;
   int b = 0;
   int c = 2;
+  if ( b  == c){
+    int d = 2;
+  }
   b = addition(a);
   c = soustraction(a, b);
 }

@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 30 21:14:46 2022
+# Make data base, printed on Thu Jun  2 16:14:16 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ OPAM_SWITCH_PREFIX = /mnt/commetud/GEI/OCaml/.opam/4.08.1
 # environment
 OCAML_TOPLEVEL_PATH = /mnt/commetud/GEI/OCaml/.opam/4.08.1/lib/toplevel
 # makefile (from 'Makefile', line 8)
-OBJ = y.tab.o lex.yy.o symbol.o util.o main.o
+OBJ = y.tab.o lex.yy.o symbol.o util.o function.o main.o
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -49,7 +49,6 @@ BIN = compilateur
 # environment
 GDM_LANG = fr_FR
 # environment
- 
 VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"25fe6a3290ec415596628d4afc87a88c.fr","_translationsConfigFile":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/tcf.json","_cacheRoot":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr","_resolvedLanguagePackCoreLocation":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/ferchich/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/corrupted.info","_languagePackSupport":true}
@@ -80,13 +79,13 @@ QT_SCALE_FACTOR = 1
 # environment
 CLUTTER_IM_MODULE = ibus
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/32266/vscode-ipc-2f309f85-3b6a-4dd4-91db-6c19b8cfeefe.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/32266/vscode-ipc-46952848-8b1f-4c9c-ab98-5236f62a1626.sock
 # environment
 VSCODE_CWD = /home/ferchich/Bureau/Projet_Système/Projet_Compilateur/Compilateur
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_32266_LStNK5
+KRB5CCNAME = FILE:/tmp/krb5cc_32266_MTnlkn
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -96,11 +95,11 @@ GRM = compilateur.y
 # environment
 GPG_AGENT_INFO = /run/user/32266/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/insa-11268:@/tmp/.ICE-unix/3100,unix/insa-11268:/tmp/.ICE-unix/3100
+SESSION_MANAGER = local/insa-11283:@/tmp/.ICE-unix/3561,unix/insa-11283:/tmp/.ICE-unix/3561
 # environment
 XDG_RUNTIME_DIR = /run/user/32266
 # environment
-WINDOWID = 50331654
+WINDOWID = 46137350
 # environment
 UBUNTU_MENUPROXY = 1
 # environment
@@ -134,7 +133,7 @@ QT_QPA_PLATFORMTHEME = gtk2
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 3175
+SSH_AGENT_PID = 3638
 # environment
 PKG_CONFIG_PATH = /usr/local/insa/shared/opam/default/lib/pkgconfig:
 # environment
@@ -184,7 +183,7 @@ CC = gcc
 # environment
 COMPIZ_CONFIG_PROFILE = mate
 # environment
-XDG_SESSION_ID = c3
+XDG_SESSION_ID = c4
 # environment
 USER = ferchich
 # environment
@@ -256,7 +255,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 21252
+VSCODE_PID = 8238
 # variable set hash-table stats:
 # Load=123/1024=12%, Rehash=0, Collisions=14/156=9%
 
@@ -266,18 +265,19 @@ VSCODE_PID = 21252
 
 # Directories
 
-# . (device 76, inode 2859633612): 23 files, no impossibilities.
+# . (device 95, inode 2859633612): 27 files, no impossibilities.
 
-# 23 files, no impossibilities in 1 directories.
+# 27 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 %.o: %.c
-#  recipe to execute (from 'Makefile', line 19):
+#  recipe to execute (from 'Makefile', line 22):
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 # 1 implicit rules, 0 (0.0%) terminal.
 
+ 
 # Files
 
 symbol.o:
@@ -302,20 +302,20 @@ compilateur.l:
 #  Modification time never checked.
 #  File has not been updated.
 
-compilateur: y.tab.o lex.yy.o symbol.o util.o main.o
+compilateur: y.tab.o lex.yy.o symbol.o util.o function.o main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-30 20:18:17.210257
+#  Last modified 2022-06-02 13:48:52.853939
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/3=0%
-#  recipe to execute (from 'Makefile', line 28):
+#  recipe to execute (from 'Makefile', line 31):
 	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@
 
 # Not a target:
 compilateur.y:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-30 21:14:46.707842
+#  Last modified 2022-06-02 13:49:17.741947
 #  File has been updated.
 #  Successfully updated.
 
@@ -327,7 +327,6 @@ lex.yy.o:
 
 # Not a target:
 .SUFFIXES:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -335,26 +334,26 @@ lex.yy.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-30 17:46:14.51664
+#  Last modified 2022-06-02 11:52:13.188315
 #  File has been updated.
 #  Successfully updated.
 
 y.tab.o: y.tab.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'y.tab'
-#  Last modified 2022-05-30 20:18:17.041257
+#  Last modified 2022-06-02 13:48:52.657937
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/3=0%
-#  recipe to execute (from 'Makefile', line 19):
+#  recipe to execute (from 'Makefile', line 22):
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 lex.yy.c: compilateur.l
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 25):
+#  recipe to execute (from 'Makefile', line 28):
 	flex $<
 
 # Not a target:
@@ -367,13 +366,20 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 31):
+#  recipe to execute (from 'Makefile', line 34):
 	rm $(OBJ) y.tab.c y.tab.h lex.yy.c compilateur
+
+function.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 19):
+	gcc -c function.c
 
 y.tab.c: compilateur.y
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
-#  Last modified 2022-05-30 20:18:16.997255
+#  Last modified 2022-06-02 13:48:52.613944
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -394,7 +400,7 @@ y.tab.c: compilateur.y
 # ? := compilateur.y
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/12=8%
-#  recipe to execute (from 'Makefile', line 22):
+#  recipe to execute (from 'Makefile', line 25):
 	yacc -d $<
 
 # Not a target:
@@ -411,19 +417,19 @@ util.o:
 	gcc -c util.c
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/39=0%
+# Load=16/1024=2%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 268 B / avg = 8 B
-# current buf: size = 8162 B / used = 268 B / count = 32 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 307 B / avg = 8 B
+# current buf: size = 8162 B / used = 307 B / count = 36 / avg = 8 B
 
-# strcache performance: lookups = 60 / hit rate = 46%
+# strcache performance: lookups = 67 / hit rate = 46%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=1/60=2%
-# Finished Make data base on Mon May 30 21:14:46 2022
+# Load=36/8192=0%, Rehash=0, Collisions=1/67=1%
+# Finished Make data base on Thu Jun  2 16:14:16 2022
 
  

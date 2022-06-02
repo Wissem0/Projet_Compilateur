@@ -44,7 +44,7 @@ Prog 			:
 Functions 		: Fun 
 					{
 					fprintf(F,"NOP\n");	
-					afficherListe_FUN(fun);	
+					afficherListe(Tablesbl);
 					} 
 				Functions
 				| 
@@ -65,8 +65,8 @@ CorpFunction: 				tBRAO Ins tRET tID tSEMC
 								setRetour(fun ,Function, adresse_length(Tablesbl,longueur));
 								fprintf(F,"COP [@%d] [@%d]\n",getRetour(fun,Function), adresse(Tablesbl, $4));	
 								supression(Tablesbl);
-								fprintf(F,"JMP LR\n");
-								afficherListe_FUN(fun);							
+								fprintf(F,"JMP LR\n");	
+								deletePro(Tablesbl, profondeur);
 								}
 				tBRAC 
 Param			: tINT tID
@@ -88,7 +88,6 @@ Main 			: tMAIN tPO tPC
 								{ 
 									deletePro(Tablesbl, profondeur);
 									printf("Prog Detected\n");
-									afficherListe_FUN(fun);	
 								}
 				;
 
@@ -114,7 +113,7 @@ Suite 			: tSEMC
 				SDecl
 				;
 
-SDecl 			: tID  {
+SDecl 			: tID  {							
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,$1, profondeur);
 						}  
 						Suite
@@ -147,12 +146,12 @@ FunCall			: tID tEQUAL tID tPO
 				 ParamCall tPC	tSEMC 
 				 					{
 									rewind(F);
-									fprintf(F,"JMP %d %d\n",length_file(F) + 1, getAdresse(fun, Function));
+									fprintf(F,"BL %d %d\n",length_file(F) + 1, getAdresse(fun, Function));
 									fprintf(F,"COP [@%d] [@%d]\n",adresse(Tablesbl,$1), getRetour(fun, Function));
 									}
 				 
 ParamCall:		tID
-					{		
+					{	
 					insertion(Tablesbl, "int", indexGlobal,"Temp_Variable", profondeur);
 					patching++;
 					Suiteparam = $1;
@@ -183,7 +182,7 @@ Decl 			: tINT tID
 							}
 							Suite 
 				;
-Boucle			: tWHILE tPO {
+Boucle			: tWHILE tPO {							
 							rewind(F);
 							int current = length_file(F);
 							$1 = current;
@@ -224,6 +223,7 @@ Boucle			: tWHILE tPO {
 
 Condition 		: tIF tPO Expr Operateur Expr 
 											{
+												afficherListe(Tablesbl);
 												if (condition == 1)
 													{
 														fprintf(F,"EQU [@%d] [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
@@ -247,7 +247,7 @@ Condition 		: tIF tPO Expr Operateur Expr
 											}
 											tPC tBRAO Ins 
 											{
-												
+												afficherListe(Tablesbl);
 												rewind(F);
 												int current = length_file(F);
 												patching = $1;
@@ -295,7 +295,6 @@ Operateur       : tCOMP
 
 Aff             : tID tEQUAL Expr tSEMC
 				{
-
 					fprintf(F,"COP [@%d] [@%d]\n",adresse(Tablesbl,$1), $3);
 					supression(Tablesbl);
 				}
@@ -306,7 +305,7 @@ Expr 			: tID 	{
 					  	}
 				| tNB 	{
 							insertion(Tablesbl, Tablesbl->premier->type, indexGlobal,"Temp_Variable", profondeur);
-							fprintf(F,"AFF [@%d] %d\n",indexGlobal-1,$1);
+							fprintf(F,"AFC [@%d] %d\n",indexGlobal-1,$1);
 							$$ = indexGlobal-1;
 						}
 				| Expr tADD Expr
