@@ -22,21 +22,21 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.cache/wt [current_project]
-set_property parent.project_path /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.xpr [current_project]
+set_property webtalk.parent_dir /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.cache/wt [current_project]
+set_property parent.project_path /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd
-  /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd
-  /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd
-  /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd
-  /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd
-  /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd
-  /home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd
+  /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd
+  /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd
+  /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd
+  /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd
+  /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd
+  /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd
+  /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

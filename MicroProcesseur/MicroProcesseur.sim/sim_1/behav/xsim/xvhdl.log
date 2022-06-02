@@ -1,2 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur

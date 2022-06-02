@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1653983731">
-  <File Type="VDS-TIMING-PB" Name="MicroProcesseur_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="MicroProcesseur_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="MicroProcesseur.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="MicroProcesseur_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="MicroProcesseur_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="MicroProcesseur_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="MicroProcesseur.vds"/>
-  <File Type="REPORTS-TCL" Name="MicroProcesseur_reports.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1654203566">
   <File Type="PA-TCL" Name="MicroProcesseur.tcl"/>
+  <File Type="REPORTS-TCL" Name="MicroProcesseur_reports.tcl"/>
+  <File Type="RDS-RDS" Name="MicroProcesseur.vds"/>
+  <File Type="RDS-DCP" Name="MicroProcesseur.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU.vhd">

@@ -10,9 +10,9 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
 Compiling architecture behavioral of entity xil_defaultlib.Memoire_instruction [memoire_instruction_default]
 Compiling architecture behavioral of entity xil_defaultlib.LI_DI [li_di_default]
 Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]

@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use ieee.NUMERIC_STD.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -175,6 +176,8 @@ signal Sortie_MUX_Mem_des_donnees_entree : STD_LOGIC_VECTOR (7 downto 0);
 --LC Mem des données
 signal LC_Mem_des_donnees : STD_LOGIC;
 
+
+signal IP: STD_LOGIC_VECTOR (7 downto 0):= "00000000";
 ----------------------------------Fin signal Interne---------------------------------------------------------------
 
 begin
@@ -184,7 +187,7 @@ begin
 Memoire_instruction_a: Memoire_instruction
 port map(           
 Clock => Clock,
-Adresse => Adresse,
+Adresse => IP,
 Sortie => Sortie_mem_instruction
 );
 
@@ -314,6 +317,13 @@ Clock => Clock,
 Sortie => Sortie_OUT_Mem_des_donnees
 );
 
+
+process 
+begin
+ wait until Clock'Event and Clock = '1';
+IP <= IP + 1;
+ 
+end process;
 
 
 ----------------------------------Fin Port Map---------------------------------------------------------------

@@ -318,3 +318,37 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Proje
 INFO: [VRFC 10-307] analyzing entity Test_MicroProcesseur
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/projet_sys/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Bench_Register.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_Register
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/EX_Mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity EX_Mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/LI_DI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LI_DI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_donnee.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_donnee
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sim_1/new/Test_MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MicroProcesseur
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur
+ERROR: [VRFC 10-724] found '0' definitions of operator "+", cannot determine exact overloaded matching definition for "+" [/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:323]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:40]
+INFO: [VRFC 10-240] VHDL file /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur
+ERROR: [VRFC 10-724] found '0' definitions of operator "+", cannot determine exact overloaded matching definition for "+" [/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:323]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd:40]
+INFO: [VRFC 10-240] VHDL file /home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/Memoire_instruction.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memoire_instruction
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sedira/Insa-prog/rendre/Projet_Compilateur/MicroProcesseur/MicroProcesseur.srcs/sources_1/new/MicroProcesseur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MicroProcesseur
