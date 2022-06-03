@@ -84,6 +84,7 @@ void insertion(Liste *liste, char *type, int adresse, char *nom, int profondeur)
                 {
                     liste->premier->type = type;
                     liste->premier->nom  = nom;
+                    liste->premier->adresse  = adresse;
                     indexGlobal++;
                     longueur++;
                 }

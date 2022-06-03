@@ -42,9 +42,8 @@ Prog 			:
 				}   
 				Functions Main;
 Functions 		: Fun 
-					{
-					fprintf(F,"NOP\n");	
-					afficherListe(Tablesbl);
+					{	
+					fprintf(F,"NOP\n");						
 					} 
 				Functions
 				| 
@@ -67,6 +66,7 @@ CorpFunction: 				tBRAO Ins tRET tID tSEMC
 								supression(Tablesbl);
 								fprintf(F,"JMP LR\n");	
 								deletePro(Tablesbl, profondeur);
+								afficherListe(Tablesbl);
 								}
 				tBRAC 
 Param			: tINT tID
@@ -94,11 +94,41 @@ Main 			: tMAIN tPO tPC
 Body 			: tBRAO  Ins tBRAC 
 				;
 
+Ins  			: Aff Ins
+	 			| Condition Ins
+				| tPRINTF tPO tID tPC tSEMC
+											{
+											fprintf(F,"PRI [@%d]\n",adresse(Tablesbl,$3));		
+											} 
+				Ins
+				| Boucle Ins
+				| Declarations Ins
+				| FunCall Ins
+				|
+				;
+
+Declarations  	: Decl Declarations
+				|
+				;
+
+Decl 			: tINT tID 		
+								{
+								
+								insertion(Tablesbl, "int", indexGlobal,$2, profondeur);
+								if (strcmp( $2,"a" ) == 0)
+								 {
+									 afficherListe(Tablesbl);
+								 }
+ 								} 
+				Suite 
+				| tCONST tID
+							{							
+							insertion(Tablesbl, "const int", indexGlobal,$2, profondeur);
+							}
+							Suite 
+				;
+
 Suite 			: tSEMC
-				{
-					fprintf(F,"COP [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
-					supression(Tablesbl);
-				}
 				| tCOMA SDecl
 				| tEQUAL Expr tSEMC
 				{
@@ -125,18 +155,9 @@ SDecl 			: tID  {
 						Expr  Suite
 				;
 
-Ins  			: Aff Ins
-	 			| Condition Ins
-				| tPRINTF tPO tID tPC tSEMC
-											{
-											fprintf(F,"PRI [@%d]\n",adresse(Tablesbl,$3));		
-											} 
-				Ins
-				| Boucle Ins
-				| Declarations Ins
-				| FunCall Ins
-				|
-				;
+
+
+
 
 FunCall			: tID tEQUAL tID tPO 
 									{
@@ -167,21 +188,7 @@ SuiteParamCall:	tCOMA ParamCall
 				| 
 				;
 
-Declarations  	: Decl Declarations
-				|
-				;
 
-Decl 			: tINT tID 		
-								{
-								insertion(Tablesbl, "int", indexGlobal,$2, profondeur);
- 								} 
-				Suite 
-				| tCONST tID
-							{
-							insertion(Tablesbl, "const int", indexGlobal,$2, profondeur);
-							}
-							Suite 
-				;
 Boucle			: tWHILE tPO {							
 							rewind(F);
 							int current = length_file(F);
@@ -223,7 +230,6 @@ Boucle			: tWHILE tPO {
 
 Condition 		: tIF tPO Expr Operateur Expr 
 											{
-												afficherListe(Tablesbl);
 												if (condition == 1)
 													{
 														fprintf(F,"EQU [@%d] [@%d] [@%d] \n",adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur-1),adresse_length(Tablesbl,longueur));
@@ -247,7 +253,6 @@ Condition 		: tIF tPO Expr Operateur Expr
 											}
 											tPC tBRAO Ins 
 											{
-												afficherListe(Tablesbl);
 												rewind(F);
 												int current = length_file(F);
 												patching = $1;

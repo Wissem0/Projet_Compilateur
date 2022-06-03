@@ -1,0 +1,17 @@
+main() {
+  int a = 0, b = 40;
+  int c;
+  c = a + b;
+  if ( a == b){
+   if ( c > 2){
+      c = c - 1;
+    }
+    else{
+      c = c + 1;
+    }
+  }
+  else{
+    a = 2 * b;
+  }
+
+}

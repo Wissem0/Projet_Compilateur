@@ -1,0 +1,13 @@
+main() {
+
+  int index = 0;
+  int sum = 0;
+  int taille = 50;
+
+  while( index < taille){
+
+    sum = sum + index;
+    index = index + 1;
+    
+  }
+}
