@@ -1,5 +1,0 @@
-main() {
-  int a = 0, b = 40;
-  int c;
-  c = a + b * 2;
-}
